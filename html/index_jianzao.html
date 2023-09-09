@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<!-- 解决IE不铺满 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../css/jquery.mobile-1.4.5.css" />
+		<link rel="stylesheet" href="../css/zs_zcjzs2.css" />
+		<script src="../js/jquery-1.11.0.min.js"></script>
+		<script src="../js/jquery.mobile-1.4.5.js"></script>
+		<!-- <script src="../js/mustache.js"></script> -->
+		<title>二级建造师注册证书</title>
+	</head>
+	<body>
+
+		<div data-role="page">
+			<div data-role="header" id="header" data-position="fixed" data-fullscreen=true>
+				<h1 id="header_h1" class="ui-title">二级建造师注册证书</h1>
+			</div>
+
+			<div data-role="content" id="content">
+				<div id="pic">
+					<img alt="无照片" src="../img/jianzao.jpg">
+				</div>
+				<div class="hidden" id="border">
+					<div id="error1">
+						<h1>暂扣</h1>
+					</div>
+				</div>
+				<table id="info" cellspacing="0" cellpadding="10px">
+					<tbody id="personinfo">
+						<tr>
+							<td class="col1">姓名</td>
+							<td>：</td>
+							<td id="col2">张静忠</td>
+						</tr>
+						<tr>
+							<td class="col1">性别</td>
+							<td>：</td>
+							<td id="col2">男</td>
+						</tr>
+						<tr>
+							<td class="col1">出生日期</td>
+							<td>：</td>
+							<td id="col2">1971年04月01日</td>
+						</tr>
+						<tr>
+							<td class="col1">注册编号</td>
+							<td>：</td>
+							<td id="col2">皖234161602090</td>
+						</tr>
+						<tr>
+							<td class="col1">聘用企业</td>
+							<td>：</td>
+							<td id="col2">安徽舜山建筑工程有限公司</td>
+						</tr>
+						<tr>
+							<td class="col1">注册专业</td>
+							<td>：</td>
+							<td id="col2"><span id="specialtytext"
+									style="color:#333333;font:16px sans-serif;font-weight: bold; ">市政公用工程
+									有效期至2026年03月15日<br>公路工程 有效期至2026年03月15日<br></span></td>
+						</tr>
+						<tr class="hidden">
+							<td class="col2" id="zkmsg"></td>
+						</tr>
+
+					</tbody>
+					<tbody id="reginfo" class="hidden">
+						<tr>
+							<td class="col2" id="zy"></td>
+						</tr>
+					</tbody>
+				</table>
+				<table id="info" cellspacing="0" cellpadding="10px">
+					<tbody id="personinfo"></tbody>
+					<tbody id="reginfo" class="hidden">
+						<tr>
+							<td class="col2" id="zy"></td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="hidden" id="error">
+					<h2>无效证书！</h2>
+				</div>
+			</div>
+			<div class="guide hidden" id="guide">
+				<div class="guide-wrap">
+					<a href="javascript:downloadPic()" id="download" class="download" data-role="button"><span
+							id="dspan">下载</span></a>
+					<form id="download_form" method="post" enctype="multipart/form-data">
+				</div>
+			</div>
+			<div data-role="footer" id="footer" data-position="fixed" data-fullscreen=true>
+				<h1>发证单位：安徽省住房和城乡建设厅</h1>
+			</div>
+		</div>
+		<!-- 标题 -->
+		<!-- <script type="text/x-template" id="temp_title">
+			{{specialtytyptext}}注册证书
+	</script> -->
+		<!-- 头像 -->
+		<!-- <script type="text/x-template" id="temp_pic">
+			<img alt="无照片" src='data:image/jpeg;base64,{{imageinfo}}'/>
+	</script> -->
+		<!-- 注册专业 -->
+		<!-- <script type="text/x-template" id="temp_reginfo">
+		{{#item}}
+			<span style="float:left" >{{specialtytext}}</span>
+		{{/item}}
+    </script> -->
+		<!-- 错误提示信息 -->
+		<!-- <script type="text/x-template" id="temp_error">
+			<div>{{msg}}</div>
+	</script> -->
+		<!-- <script src="../js/zs_zcjzs2.js"></script> -->
+		<script>
+			var unid = getUrlParam("id");
+			var zxguid = getUrlParam("zxguid");
+			if (zxguid == null || zxguid == '')
+				zxguid = "_Q";
+
+			function downloadPic() {
+				var form = document.getElementById('download_form');
+				form.action = "getreginfoaction.action?cmd=getcontent&attachGuid=" + unid + "&zxguid=" + zxguid;
+				form.submit();
+			}
+
+			//获取url中的参数
+			function getUrlParam(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+				var r = window.location.search.substr(1).match(reg); //匹配目标参数
+				if (r != null)
+					return unescape(r[2]);
+				return null; //返回参数值
+			}
+		</script>
+	</body>
+</html>

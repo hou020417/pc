@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Export PDF</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <div id="pdf">
+
+      <h1>Hello, World!</h1>
+
+      <p>This is a test PDF file.</p>
+
+    </div>
+
+    <button onclick="exportPDF()">Export PDF</button>
+
+    <script>
+
+      function exportPDF() {
+
+        html2canvas(document.querySelector("#pdf"), {
+
+          allowTaint: true,
+
+          useCORS: true,
+
+          scale: 2,
+
+          scrollX: -window.scrollX,
+
+          scrollY: -window.scrollY,
+
+        }).then((canvas) => {
+
+          const pdf = new jsPDF("p", "pt", "a4");
+
+          const imgData = canvas.toDataURL("image/png");
+
+          const imgWidth = 210;
+
+          const pageHeight = 295;
+
+          const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+          let heightLeft = imgHeight;
+
+          let position = 0;
+
+
+
+          pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+
+          heightLeft -= pageHeight;
+
+
+
+          while (heightLeft >= 0) {
+
+            position = heightLeft - imgHeight;
+
+            pdf.addPage();
+
+            pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+
+            heightLeft -= pageHeight;
+
+          }
+
+
+
+          pdf.save("test.pdf");
+
+        });
+
+      }
+
+    </script>
+
+  </body>
+
+</html>
