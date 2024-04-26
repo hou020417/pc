@@ -13,7 +13,6 @@
 		<link rel="shortcut icon" href='../css/favicon.ico' type="image/x-icon" />
 		<link rel="stylesheet" href="../css/iconfont.css" />
 		<link rel="stylesheet" href="../css/zxyz_bg.css">
-		<!-- <link href='https://t3.chei.com.cn/chsi/assets/gb/pc/css/app.css?20230331' rel="stylesheet" type="text/css" /> -->
 		<link href='../css/app.css' rel="stylesheet" type="text/css" />
 		<script type="text/javascript" src='../js/jquery.min.js'></script>
 		<script>
@@ -86,6 +85,7 @@
 					position: relative;
 					overflow: hidden
 				}
+
 				.t_header_new .t_h_logo_new a.home {
 					display: block;
 					width: 90px;
@@ -168,17 +168,33 @@
 					text-decoration: none;
 					background-color: #00aab7
 				}
-				.zxyz-res.xl-zxyz-res .report-info-item .label{
+
+				.zxyz-res .report-info-item .label {
+					width: 156px;
+				}
+
+				.zxyz-res.xl-zxyz-res .report-info-item .fontMz {
+					font-size: 15px;
 					padding: 6px 0;
 				}
-			</style>
-			<img src='https://t1.chei.com.cn/common/wap/images/share_xxw.jpg' width='0' height='0'
-				style='position: absolute;top:-100px;left: 0' />
 
+				@font-face {
+					font-family: 'ziti';
+					src: url('../css/ChillDuanSans_Regular.otf');
+				}
+
+				.ziti {
+					font-family: 'ziti';
+				}
+
+				.zxyz-res .zxyz-res-code {
+					border: 2px solid rgb(151, 193, 184);
+				}
+			</style><img src='https://t1.chei.com.cn/common/wap/images/share_xxw.jpg' width='0' height='0'
+				style='position: absolute;top:-100px;left: 0' />
 			<div class="t_top_nav_new">
 				<div class="width1180">
 					<div style="display:none;"></div>
-
 				</div>
 			</div>
 			<div class="t_header_new">
@@ -252,178 +268,155 @@
 							<div class="chooseLan zxyzChooseLan">
 								报告语种
 								<a href="/xlcx/bg.do?vcode=AEQ4WN8086SHSL9R&amp;lang=CN&amp;srcid=bgcx"
-									class="current">中文</a>
-								<a href="javascript:;" id="openerHref">英文</a>
-								<div id="noenreport" title="申请英文版">
-									<span class="noenreportArrow"></span>
-									<a href="#" title="关闭" class="newLayerClose"></a>
+									class="current">中文</a><a href="javascript:;" id="openerHref">英文</a>
+								<div id="noenreport" title="申请英文版"><span class="noenreportArrow"></span><a href="#"
+										title="关闭" class="newLayerClose"></a>
 									该备案表尚无对应的翻译件（英文），您可登录<a href="https://my.chsi.com.cn/archive/index.jsp#zxyz"
 										target="_blank" style="color: rgb(0, 102, 204); margin-left: 0px">学信档案</a>进行申请。
 								</div>
 							</div>
 						</div>
-						<div class="printBG clearfix">
-							<a id="bindGA_print" href="javascript:;" title="打印" class="iconClick iconPrint">&nbsp;</a>
-							<a id="bindGA_download" href="javascript:;" title="下载" class="iconClick iconDownload">&nbsp;</a>
-							<a id="showEmail" href="#" title="发送" class="iconClick iconEmail">&nbsp;</a>
-							<a id="openxxewm" href="#" title="学信二维码" class="iconClick iconXxewm">&nbsp;</a>
-							<div id="bgdy" class="newLayer bgdy_newLayer" style="padding-bottom: 13px; display: none;right: 29px;">
-								<span class="newLayerArrow" style="right: 88px"></span>
-								<a href="#" title="关闭" class="newLayerClose"></a>
-								<div class="alignC">
-									<img src="https://t4.chei.com.cn/chsi/images/yzbg/2022/xlbg_sample_s.jpg" alt="报告样本"
-										width="80" /><br />
-									<a id="go_bindGA_print" href="javascript:;" title="打印报告"
-										class="bindGA colorBlue">打印报告</a><br />
-									<!-- <a href="/report/xueli/survey.do?vcode=AEQ4WN8086SHSL9R"
-										onmousedown="bgTopClick('print_zysurvey','onlinereport','cn')" title="问卷调查"
-										target="_blank" class="dcwjA">调查</a> -->
-								</div>
+						<div class="printBG clearfix"><a id="bindGA_print" href="javascript:;" title="打印"
+								class="iconClick iconPrint">&nbsp;</a><a id="bindGA_download" href="javascript:;"
+								title="下载" class="iconClick iconDownload">&nbsp;</a><a id="showEmail" href="#"
+								title="发送" class="iconClick iconEmail">&nbsp;</a><a id="openxxewm" href="#"
+								title="学信二维码" class="iconClick iconXxewm">&nbsp;</a>
+							<div id="bgdy" class="newLayer bgdy_newLayer"
+								style="padding-bottom: 13px; display: none;right: 29px;"><span class="newLayerArrow"
+									style="right: 88px"></span><a href="#" title="关闭" class="newLayerClose"></a>
+								<div class="alignC"><img
+										src="https://t4.chei.com.cn/chsi/images/yzbg/2022/xlbg_sample_s.jpg" alt="报告样本"
+										width="80" /><br /><a id="go_bindGA_print" href="javascript:;" title="打印报告"
+										class="bindGA colorBlue">打印报告</a><br /></div>
 							</div>
 							<div id="bgxz" class="newLayer bgxz_newLayer" style="padding-bottom: 13px; display: none">
-								<span class="newLayerArrow" style="right: 77px"></span>
-								<a href="#" title="关闭" class="newLayerClose"></a>
-								<div class="alignC">
-									<img src="https://t4.chei.com.cn/chsi/images/yzbg/2022/xlbg_sample_s.jpg" alt="报告样本"
-										width="80" /><br />
-									<a id="go_bindGA_download" href="https://y2.cschsi.com//pdf/AGS9DKYW7EH2KW6Z.pdf"
-										title="打印报告" class="bindGA colorBlue">下载报告</a><br />
-									<!-- <a href="/report/xueli/survey.do?vcode=AEQ4WN8086SHSL9R"
-										onmousedown="bgTopClick('download_zysurvey','onlinereport','cn')" title="问卷调查"
-										target="_blank" class="dcwjA">调查</a> -->
-								</div>
+								<span class="newLayerArrow" style="right: 77px"></span><a href="#" title="关闭"
+									class="newLayerClose"></a>
+								<div class="alignC"><img
+										src="https://t4.chei.com.cn/chsi/images/yzbg/2022/xlbg_sample_s.jpg" alt="报告样本"
+										width="80" /><br /><a id="go_bindGA_download"
+										href="https://y2.cschsi.com//pdf/AGS9DKYW7EH2KW6Z.pdf" title="打印报告"
+										class="bindGA colorBlue">下载报告</a><br /></div>
 							</div>
-							<div id="emailBox" class="newLayer" style="display: none">
-								<span class="newLayerArrow" style="right: 37px"></span>
-								<a href="#" title="关闭" class="newLayerClose"></a>
+							<div id="emailBox" class="newLayer" style="display: none"><span class="newLayerArrow"
+									style="right: 37px"></span><a href="#" title="关闭" class="newLayerClose"></a>
 								<table border="0" cellpadding="0" cellspacing="6">
 									<tbody>
 										<tr>
 											<td align="left" colspan="2">发送报告到指定邮箱：</td>
 										</tr>
 										<tr>
-											<td>
-												<input type="text" name="toEmail" id="toEmail" value=""
-													class="input_text input_t_l" />
-											</td>
-											<td>
-												<input type="button" value="发送"
+											<td><input type="text" name="toEmail" id="toEmail" value=""
+													class="input_text input_t_l" /></td>
+											<td><input type="button" value="发送"
 													onclick="bgTopClick('email','onlinereport','cn')" id="emailButton"
-													class="btn_blue" />
-											</td>
+													class="btn_blue" /></td>
 										</tr>
 										<tr>
-											<td align="left" colspan="2">
-												<span id="emailMsg">&nbsp;</span>
-											</td>
+											<td align="left" colspan="2"><span id="emailMsg">&nbsp;</span></td>
 										</tr>
 									</tbody>
 								</table>
 							</div>
-							<div id="xxewm" title="学信二维码" class="newLayer" style="display: none">
-								<span class="newLayerArrow" style="right: 5px"></span>
-								<a href="#" title="关闭" class="newLayerClose"></a>
-								<div class="alignC">
-									<img src="https://www.chsi.com.cn/report/img/749166e45e918135533c965721252f7297d9366425.jpg"
-										alt="学信二维码" /><br />
-									<a target="_blank" onmousedown="bgTopClick('download_barcode','onlinereport','cn')"
+							<div id="xxewm" title="学信二维码" class="newLayer" style="display: none"><span
+									class="newLayerArrow" style="right: 5px"></span><a href="#" title="关闭"
+									class="newLayerClose"></a>
+								<div class="alignC"><img
+										src="https://www.chsi.com.cn/report/img/749166e45e918135533c965721252f7297d9366425.jpg"
+										alt="学信二维码" /><br /><a target="_blank"
+										onmousedown="bgTopClick('download_barcode','onlinereport','cn')"
 										href="/xlcx/downloadxxewm.do?id=49166459183553365721227297936642&amp;ln=CN"
-										class="bindGA colorBlue">下载</a>
-								</div>
+										class="bindGA colorBlue">下载</a></div>
 							</div>
 						</div>
 						<div id="resultTable" onclick="exportPDF()">
-							<div id="ssss" class="zxyz-res xl-zxyz-res" style="padding: 60px 77px 56px;">
-								<h4>教育部学籍在线验证报告</h4>
-								<div class="update-time">更新日期：2023年09月01日</div>
-								<div class="report-info">
-									<div class="r-zp-wrap" style="top: 42px;width: 105px;height: 141px;">
-										<img style="width: 100%;" src="../img/AGXDN6QABO9YCAPA.jpg" alt="" class="report-info-zp" />
+							<div id="ssss" class="zxyz-res xl-zxyz-res" style="padding: 66px 80px 56px;">
+								<h4 class="ziti" style="padding: 0 0 5px;font-size: 28px;">教育部学籍在线验证报告</h4>
+								<div class="update-time" style="font-size: 13px;">更新日期：2024年04月26日</div>
+								<div class="report-info" style="padding-top: 8px;">
+									<div class="r-zp-wrap" style="top: 42px;width: 105px;height: 141px;"><img
+											style="width: 100%;" src="../img/AN0U9G5NKYQ7NDIC.jpg" alt=""
+											class="report-info-zp" /></div>
+									<div class="report-info-item">
+										<div class="label fontMz">姓名</div>
+										<div class="value fontMz ziti">谢兰芳</div>
 									</div>
 									<div class="report-info-item">
-										<div class="label">姓名</div>
-										<div class="value">李建宁</div>
+										<div class="label fontMz">性别</div>
+										<div class="value fontMz ziti">女</div>
 									</div>
 									<div class="report-info-item">
-										<div class="label">性别</div>
-										<div class="value">女</div>
+										<div class="label fontMz">证件号码</div>
+										<div class="value fontMz ziti">421087199010195320</div>
 									</div>
 									<div class="report-info-item">
-										<div class="label">证件号码</div>
-										<div class="value">321321200301123427</div>
+										<div class="label fontMz">民族</div>
+										<div class="value fontMz ziti">汉族</div>
 									</div>
 									<div class="report-info-item">
-										<div class="label">民族</div>
-										<div class="value">汉族</div>
+										<div class="label fontMz">出生日期</div>
+										<div class="value fontMz ziti">1990年10月19日</div>
 									</div>
 									<div class="report-info-item">
-										<div class="label">出生日期</div>
-										<div class="value">2003年01月12日</div>
+										<div class="label fontMz">院校</div>
+										<div class="value long fontMz ziti">武昌理工学院</div>
 									</div>
 									<div class="report-info-item">
-										<div class="label">院校</div>
-										<div class="value long">广东轻工职业技术学院</div>
+										<div class="label fontMz">层次</div>
+										<div class="value long fontMz ziti">本科</div>
 									</div>
 									<div class="report-info-item">
-										<div class="label">层次</div>
-										<div class="value long">专科</div>
+										<div class="label fontMz">院系</div>
+										<div class="value long fontMz ziti">计算信息技术学院</div>
 									</div>
 									<div class="report-info-item">
-										<div class="label">院系</div>
-										<div class="value long">信息技术学院</div>
+										<div class="label fontMz">班级</div>
+										<div class="value long fontMz ziti">201904</div>
 									</div>
 									<div class="report-info-item">
-										<div class="label">班级</div>
-										<div class="value long">电子0250</div>
+										<div class="label fontMz">专业</div>
+										<div class="value long fontMz ziti">计算机网络</div>
 									</div>
 									<div class="report-info-item">
-										<div class="label">专业</div>
-										<div class="value long">电子与信息</div>
+										<div class="label fontMz">学号</div>
+										<div class="value long fontMz ziti">65420185092013180</div>
 									</div>
 									<div class="report-info-item">
-										<div class="label">学号</div>
-										<div class="value long">14110205023</div>
+										<div class="label fontMz">形式</div>
+										<div class="value long fontMz ziti">普通全日制</div>
 									</div>
 									<div class="report-info-item">
-										<div class="label">形式</div>
-										<div class="value long">普通全日制</div>
+										<div class="label fontMz">入学日期</div>
+										<div class="value long fontMz ziti">2009年09月01日</div>
 									</div>
 									<div class="report-info-item">
-										<div class="label">入学日期</div>
-										<div class="value long">2021年09月30日</div>
+										<div class="label fontMz">学制</div>
+										<div class="value long fontMz ziti">4 年</div>
 									</div>
 									<div class="report-info-item">
-										<div class="label">学制</div>
-										<div class="value long">3 年</div>
+										<div class="label fontMz">类型</div>
+										<div class="value long fontMz ziti">普通高等教育</div>
 									</div>
 									<div class="report-info-item">
-										<div class="label">类型</div>
-										<div class="value long">普通高等教育</div>
+										<div class="label fontMz">学籍状态</div>
+										<div class="value long fontMz ziti">毕业（毕业日期：2015年06月30日）</div>
 									</div>
-									<div class="report-info-item">
-										<div class="label">学籍状态</div>
-										<div class="value long">毕业 (毕业日期:2023年06月30日)</div>
-									</div>
-								
 								</div>
 								<div class="zxyz-res-bottom" style="width: 620px;">
-									<div class="zxyz-res-code" style="border-radius: 0;padding: 5px 17px;">
-										<div class="left">
-											<img src="../img/AGXDN6QABO9YCAPA.png" width="90" class="bg_ewm" />
-										</div>
-										<div class="right" style="color: #000000;">
-											<div class="r_top" style="padding: 0;margin-top: 17px;">
-												<span class="text">在线验证码</span>
-												<span class="yzm"><a>AGXDN6QABO9YCAPA</a></span>
-												<!-- <span class="yzm">AGS9DKYW7EH2KW6Z</span> -->
-											</div>
-											<span class="xh">①</span>验证报告在线查验网址：https://www.chsi.com.cn/xlcx/bgcx.jsp<br />
-											<span class="xh">②</span>使用学信网App扫描二维码验证
+									<div class="zxyz-res-code" style="border-radius: 0;padding: 5px 17px;margin-bottom: 11px;">
+										<div class="left"><img src="../img/AN0U9G5NKYQ7NDIC.png" width="90"
+												class="bg_ewm" /></div>
+										<div class="right" style="color: #000000;font-size: 13px;">
+											<div class="r_top" style="padding: 0;margin-top: 17px;margin-bottom: 3px;"><span
+													class="text" style="margin-right: 3px;">在线验证码</span><span
+													class="yzm ziti" style="line-height: 19px;font-size: 19px;"><a id="nameSboss">AN0U9G5NKYQ7NDIC</a></span></div><span
+												class="xh">①</span>验证报告在线查验网址：<span style="font-size: 15px;">https://www.chsi.com.cn/xlcx/bgcx.jsp</span><br /><span
+												class="xh">②</span>使用学信网App扫描二维码验证
 										</div>
 									</div>
 									<div class="zxyz-res-tip">
-										<h3 class="zxyz-res-tip-title">注意事项：</h3>
-										<div class="zxyz-res-tip-content" style="line-height: 24px;">
+										<h3 class="zxyz-res-tip-title ziti" style="transform: scale(0.85);transform-origin: left center;margin-bottom: -12px;">注意事项：</h3>
+										<div class="zxyz-res-tip-content ziti" style="line-height: 23px;transform: scale(0.85);transform-origin: left bottom;">
 											1、《学籍在线验证报告》是教育部学籍电子注册备案的查询结果。<br />
 											2、报告内容如有修改，请以最新在线验证的内容为准。<br />
 											3、未经学籍信息权属人同意，不得将报告用于违背权属人意愿之用途。<br />
@@ -431,9 +424,8 @@
 										</div>
 									</div>
 								</div>
-								<div class="zxyz-res-bot" style="right: 60px;bottom: 49px;">
-									<img src="../img/logo.png" height="32" />
-								</div>
+								<div class="zxyz-res-bot" style="right: 60px;bottom: 53px;"><img src="../img/logo.png"
+										height="32" /></div>
 							</div>
 						</div>
 					</div>
@@ -445,7 +437,6 @@
 				<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
 				<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 				<script src='../js/pdf.js'></script>
-				<!-- <div id="share"></div> -->
 				<script>
 					var s = new SnsShare("share");
 					s.show();
@@ -460,6 +451,7 @@
 							return false;
 						});
 					});
+
 					function exportPDF() {
 						html2canvas(document.querySelector("#ssss"), {
 							// allowTaint: true,
@@ -470,37 +462,38 @@
 						}).then((canvas) => {
 							// var pageData = canvas.toDataURL("image/jpeg", 1.0);
 							// var pdf = new JsPDF("", "pt", "a4");
-							const pdf = new jsPDF("", "pt", "a4");
+							var name = $('#nameSboss').html()
+							const pdf = new jsPDF("", "pt", "a4", true);
 							const pageData = canvas.toDataURL("image/png");
 							var contentWidth = canvas.width;
 							var contentHeight = canvas.height;
-							  // 一页pdf显示html页面生成的canvas高度;
-							  var pageHeight = (contentWidth / 595.28) * 841.89;
-							  // var pageHeight = 841.89;
-							  // 未生成pdf的html页面高度
-							  var htmlHeight = contentHeight;
-							  // pdf页面偏移
-							  var position = 0;
-							  // a4纸的尺寸[595.28,841.89]，html页面生成的canvas在pdf中图片的宽高
-							  var imgWidth = 595.28;
-							  // var imgHeight = 841.89;
-							  var imgHeight = (592.28 / contentWidth) * contentHeight;
-							  // 有两个高度需要区分，一个是html页面的实际高度，和生成pdf的页面高度(841.89)
-							  // 当内容未超过pdf一页显示的范围，无需分页
-							  if (htmlHeight < pageHeight) {
-								pdf.addImage(pageData, "PNG", 0, 0, imgWidth, imgHeight);
-							  } else {
+							// 一页pdf显示html页面生成的canvas高度;
+							var pageHeight = (contentWidth / 595.28) * 841.89;
+							// var pageHeight = 841.89;
+							// 未生成pdf的html页面高度
+							var htmlHeight = contentHeight;
+							// pdf页面偏移
+							var position = 0;
+							// a4纸的尺寸[595.28,841.89]，html页面生成的canvas在pdf中图片的宽高
+							var imgWidth = 595.28;
+							// var imgHeight = 841.89;
+							var imgHeight = (592.28 / contentWidth) * contentHeight;
+							// 有两个高度需要区分，一个是html页面的实际高度，和生成pdf的页面高度(841.89)
+							// 当内容未超过pdf一页显示的范围，无需分页
+							if (htmlHeight < pageHeight) {
+								pdf.addImage(pageData, "PNG", 0, 0, imgWidth, imgHeight, '', 'FAST');
+							} else {
 								while (htmlHeight > 0) {
-								  pdf.addImage(pageData, "PNG", 0, position, imgWidth, imgHeight);
-								  htmlHeight -= pageHeight;
-								  position -= 841.89;
-								  // 避免添加空白页
-								 //  if (htmlHeight > 0) {
+									pdf.addImage(pageData, "PNG", 0, position, imgWidth, imgHeight, '', 'FAST');
+									htmlHeight -= pageHeight;
+									position -= 841.89;
+									// 避免添加空白页
+									//  if (htmlHeight > 0) {
 									// pdf.addPage();
-								 //  }
+									//  }
 								}
-							  }
-							pdf.save("test.pdf");
+							}
+							pdf.save(`edited_${name}.pdf`);
 						});
 					}
 					$(function() {
@@ -541,7 +534,7 @@
 							$(this).parent("div").hide();
 							return false;
 						});
-				
+
 						$("#showEmailEn").click(function() {
 							$("#emailBoxEn").toggle();
 							$("#xxewmEn").hide();
@@ -556,7 +549,7 @@
 							$(this).parent(".newLayer").hide();
 							return false;
 						});
-				
+
 						// ga事件参数设置，参考：http://jira.chsi.com.cn/wiki/pages/viewpage.action?pageId=8651194
 						$(".openSample").live("click", function() {
 							gtag('event', 'barcode_usecaseclick', {
@@ -565,7 +558,7 @@
 								'value': '1'
 							});
 						});
-				
+
 						$(".bindGA").click(function() {
 							gtag('event', 'download_barcode', {
 								'event_category': 'onlinereport',
@@ -580,7 +573,7 @@
 								'value': '1'
 							});
 						});
-				
+
 						$("#go_bindGA_print").click(function() {
 							doPrint();
 							gtag('event', 'print', {
@@ -625,7 +618,7 @@
 								'value': '1'
 							});
 						});
-				
+
 						$("#emailButton").click(function() {
 							sendEmail(
 								"/report/xueli/email.do?vcode=AYDZSG3WMHCFZ2YX&amp;rid=83268314577819909045075744016084&amp;ln=cn"
@@ -646,14 +639,14 @@
 								'value': '1'
 							});
 						});
-				
-				
+
+
 						$(".sr_tab_title > li").live("click", function() {
 							index = $(this).parent().children("li").index(this);
 							$(this).addClass("onread").siblings("li").removeClass("onread");
 							$(".sr_tab_cnt_toggle").children("div").eq(index).show().siblings("div").hide();
 						});
-				
+
 						//照片水平垂直都居中
 						var imgLeft = ($("#xueli_photo_div").width() - $("#xueliPhoto").attr("width")) / 2;
 						var imgTop = ($("#xueli_photo_div").height() - $("#xueliPhoto").attr("height")) / 2;
@@ -729,18 +722,15 @@
 				}
 			</style>
 			<div class="foot-wrap" id="footer">
-				<div class="footer-nav">
-					<a href="https://chesicc.chsi.com.cn/zxgw/zxjs/201604/20160418/1529506207.html"
-						target="_blank">中心简介</a>
-					<a href="https://www.chsi.com.cn/about/about_site.shtml" target="_blank">网站简介</a>
-					<a href="https://www.chsi.com.cn/about/copyright.shtml" target="_blank">版权声明</a>
-					<a href="https://www.chsi.com.cn/ad/index.shtml" target="_blank">网站宣传</a>
-					<a href="https://www.chsi.com.cn/about/contact.shtml" target="_blank">联系我们</a>
-					<a href="https://www.chsi.com.cn/zhaopin/index.jsp" target="_blank">招聘信息</a>
-					<a href="https://www.chsi.com.cn/help" target="_blank">帮助中心</a>
-					<a href="https://www.chsi.com.cn/z/tenyears/index.jsp" target="_blank">学信十周年</a>
-					<a href="https://www.chsi.com.cn/about/ct16.shtml" target="_blank">大事记</a>
-				</div>
+				<div class="footer-nav"><a href="https://chesicc.chsi.com.cn/zxgw/zxjs/201604/20160418/1529506207.html"
+						target="_blank">中心简介</a><a href="https://www.chsi.com.cn/about/about_site.shtml"
+						target="_blank">网站简介</a><a href="https://www.chsi.com.cn/about/copyright.shtml"
+						target="_blank">版权声明</a><a href="https://www.chsi.com.cn/ad/index.shtml"
+						target="_blank">网站宣传</a><a href="https://www.chsi.com.cn/about/contact.shtml"
+						target="_blank">联系我们</a><a href="https://www.chsi.com.cn/zhaopin/index.jsp"
+						target="_blank">招聘信息</a><a href="https://www.chsi.com.cn/help" target="_blank">帮助中心</a><a
+						href="https://www.chsi.com.cn/z/tenyears/index.jsp" target="_blank">学信十周年</a><a
+						href="https://www.chsi.com.cn/about/ct16.shtml" target="_blank">大事记</a></div>
 				<div class="footer width1180 clearfix">
 					<div class="footer-list border-r" id="footerListFirst">
 						客服热线：010-67410388<br />
@@ -751,18 +741,14 @@
 						Copyright © 2003-2023 <a href="https://www.chsi.com.cn/" target="_blank">学信网</a> All Rights
 						Reserved
 					</div>
-					<div class="footer-list">
-						<a href="https://beian.miit.gov.cn" target="_blank">京ICP备19004913号-1</a><br />
-						<a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010202009747"
+					<div class="footer-list"><a href="https://beian.miit.gov.cn"
+							target="_blank">京ICP备19004913号-1</a><br /><a
+							href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010202009747"
 							target="_blank"><img src='https://t3.chei.com.cn/chsi/images/jgwab.png' />
-							京公网安备11010202009747号</a>
-					</div>
+							京公网安备11010202009747号</a></div>
 				</div>
 			</div>
 		</div>
-
-
-
 		<script src="../js/vue.min.js"></script>
 		<script src='../js/iview.min.js'></script>
 		<script src='../js/gototop2.0.js'></script>
@@ -771,8 +757,6 @@
 		<script src='../js/least-ie11.min.js'></script>
 		<script src="../js/vendors.js"></script>
 		<script src="../js/app.js"></script>
-		<!-- <div id="share"></div> -->
-
 		<script>
 			var chsiApp = new Vue({
 				el: '#app',
@@ -787,8 +771,7 @@
 						document.getElementById("appLoading").style.display = "none";
 					}
 				},
-				methods: {
-				}
+				methods: {}
 			});
 			var s = new SnsShare("share");
 			var gtt = new CreatGoToTop('1180', 'https://www.chsi.com.cn/');

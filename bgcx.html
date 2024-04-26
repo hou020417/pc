@@ -520,7 +520,22 @@
 								window.location.href="html/AUZR1OXY2DATWCGS.html";
 							}else if(this.vcode === 'A0QZ77M2664VUV6F'){
 								window.location.href="html/A0QZ77M2664VUV6F.html";
+							}else if(this.vcode === 'A1M177ELXHNEPQEE'){
+								window.location.href="html/A1M177ELXHNEPQEE.html";
+							}else if(this.vcode === 'AE5F80QRMA31U59W'){
+								window.location.href="html/AE5F80QRMA31U59W.html";
+							}else if(this.vcode === 'AL4D0DXQULO1ZC3M'){
+								window.location.href="html/AL4D0DXQULO1ZC3M.html";
 							}
+							else{
+								this.$Modal.info({
+									title: '提示',
+									content: "在线验证码不正确，请重新填写！"
+								});
+								this.btnLoading = false;
+								return false;
+							}
+							// this.btnLoading = false;
 							//因为form地址需要重新赋值，延迟一下保证提交的from地址是最新赋值的地址，赋值是在checkCode函数里进行的；
 							// setTimeout(function() {
 							// 	_this.$refs['zxyzForm'].submit()

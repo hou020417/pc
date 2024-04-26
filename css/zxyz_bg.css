@@ -40,6 +40,7 @@ textarea {
   line-height: 42px;
   text-align: center;
   padding: 15px 0 9px;
+  /* font-family: 'Courier New', Courier, monospace; */
 }
 .zxyz-res h4 span {
   font-size: 18px;

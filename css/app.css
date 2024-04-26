@@ -379,7 +379,7 @@ samp {
 
 @font-face {
 	font-family: Ionicons;
-	src: url(../font/ionicons.woff2) format("woff2"), url(../font/ionicons.woff) format("woff"), url(../font/ionicons.ttf) format("truetype"), url(../images/ionicons.svg#Ionicons) format("svg");
+	src: url(./ionicons.woff2) format("woff2"), url(../font/ionicons.woff) format("woff"), url(../font/ionicons.ttf) format("truetype"), url(../images/ionicons.svg#Ionicons) format("svg");
 	font-weight: 400;
 	font-style: normal
 }
