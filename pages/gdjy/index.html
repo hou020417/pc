@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html style="margin-top: 0px;">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<title>学信档案</title>
+		<meta name="keywords" content="学信档案，高等教育信息，学籍学历，图片校对">
+		<meta name="description"
+			content="“学信档案”是中国高等教育学生信息网（简称“学信网”）各类学生个人信息档案的总称，涉及全国高等教育学生信息数据库中各类学生的学籍、学历、招生录取、助学贷款等信息。">
+		<meta http-equiv="x-dns-prefetch-control" content="on">
+		<meta name="format-detection" content="telephone=no, email=no">
+		<!-- 目的是为了用户在使用谷歌系浏览器时 跳转到机器人模块后 可以读取完整referer -->
+		<meta name="referrer" content="no-referrer-when-downgrade">
+		<link rel="dns-prefetch" href="//t1.chei.com.cn?v=1531374966451">
+		<link rel="dns-prefetch" href="//t2.chei.com.cn?v=1531374966451">
+		<link rel="dns-prefetch" href="//t3.chei.com.cn?v=1531374966451">
+		<link rel="dns-prefetch" href="//t4.chei.com.cn?v=1531374966451">
+		<link rel="dns-prefetch" href="//ssl.google-analytics.com?v=1531374966451">
+		<link rel="icon" href="https://t1.chei.com.cn/archive/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="https://t1.chei.com.cn/common/bootstrap3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://t1.chei.com.cn/common/ch/iconfont.css">
+		<link rel="stylesheet" href="https://t4.chei.com.cn/archive/css/custom/archive-1.0.3.min.css">
+		<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+		<script type="text/javascript" async=""
+			src="https://www.googletagmanager.com/gtag/js?id=G-RNH4PZV76K&amp;l=dataLayer&amp;cx=c"></script>
+		<script type="text/javascript" id="zhuge-js" async="" src="https://tt.chei.com.cn/zhuge.js?v=2024419"></script>
+		<script src="https://hm.baidu.com/hm.js?ed4ddcd4078a486f1f5760a6c426b738"></script>
+		<script src="https://t1.chei.com.cn/common/jquery/1.9.1/jquery.min.js"></script>
+		<script src="https://t1.chei.com.cn/common/plugins/layer/layer.js"></script>
+		<link rel="stylesheet" href="https://t1.chei.com.cn/common/plugins/layer/skin/default/layer.css?v=3.0.3303"
+			id="layuicss-skinlayercss">
+		<script src="https://t3.chei.com.cn/archive/mobile/js/lodash.min.js"></script>
+		<script src="https://t1.chei.com.cn/common/zhuge/zhuge-1.0.0.js"></script>
+
+		<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-100524-5"></script>
+		<script>
+			// 放在ga.jsp 中
+			function gaTrackerOutboundLink(ele, eventCategory, eventAction, eventLabel) {
+				gtag('event', eventAction, {
+					'event_category': eventCategory,
+					'event_label': eventLabel
+				});
+				return true;
+			}
+			window.dataLayer = window.dataLayer || [];
+
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+			gtag('config', 'UA-100524-5', {
+				'sample_rate': 5
+			});
+
+			// 诸葛统计代码
+			var zhugeFun = {
+				init: function(flag) {
+					var OpenautoTrack = typeof flag != 'undefined' ? flag : false; //是否开启全埋点
+					if (!flag) {
+						var _url = window.location.href;
+						if (_url.indexOf('/archive/index') > -1 || _url.indexOf('archive/wap/index') > -1) { //pc、wap首页
+							OpenautoTrack = true;
+						}
+					}
+					window.zhuge.load('0d76434d9bb94abfaa16e1d5a3d82b52', { //配置应用的AppKey
+						autoTrack: OpenautoTrack
+					});
+				},
+				votePv: function(name, from, type) {
+					// 问卷浏览量
+					// name string  问卷名称
+					// from string 来源
+					// type string 类型，就业还是学职
+					//浏览问卷 
+					zhuge.track('votePv', {
+						'问卷名称': name,
+						'访问来源': from,
+						'问卷类型': type
+					});
+				},
+				voteClick: function(name, from, type) {
+					// 问卷点击量
+					// name string  问卷名称
+					// from string 来源
+					// type string 类型，就业还是学职
+					//点击问卷
+					zhuge.track('voteClick', {
+						'问卷名称': name,
+						'访问来源': from,
+						'问卷类型': type
+					});
+				},
+				voteSubmit: function(name, from, type, time) {
+					// 问卷提交量
+					// name string  问卷名称
+					// from string 来源
+					// type string 类型，就业还是学职
+					// time num 完成问卷用时
+					//问卷提交成功
+					zhuge.track('voteSubmitSuccess', {
+						'问卷名称': name,
+						'访问来源': from,
+						'问卷类型': type,
+						'问卷用时': time
+					});
+				},
+				voteClickSubmit: function(name, from, type) {
+					// 问卷前台校验通过，还未传后台前的提交量
+					// name string  问卷名称
+					// from string 来源
+					// type string 类型，就业还是学职
+					//点提交按钮
+					zhuge.track('voteClickSubmit', {
+						'问卷名称': name,
+						'访问来源': from,
+						'问卷类型': type
+					});
+				},
+				//去往新职业
+				goNcss: function(from, to) {
+					//点击新职业
+					zhuge.track('goNcss', {
+						'来源': from,
+						'去向': to
+					});
+				},
+				//去往学职
+				goXz: function(from, to) {
+					// 点击去学职
+					zhuge.track('goXz', {
+						'来源': from,
+						'去向': to
+					});
+				},
+				pagePv: function(name, platform, hasData) {
+					//各类页面访问量
+					if (typeof hasData != 'undefined') {
+						zhuge.track('pagePv', {
+							'名称': name,
+							'设备信息': platform,
+							'是否有数据': hasData
+						});
+					} else {
+						zhuge.track('pagePv', {
+							'名称': name,
+							'设备信息': platform
+						});
+					}
+				},
+				gdjyToZxyz: function(type, platform) { //从高等教育点击到在线验证
+					//从高等教育点击到在线验证
+					zhuge.track('gdjyToZxyzClick', {
+						'类型': type,
+						'设备信息': platform
+					});
+				},
+				xjxlMydClick: function(type) { //学籍学历右侧的满意度推荐按钮点击情况
+					//从高等教育点击满意度
+					zhuge.track('xjxlMydClick', {
+						'类型': type
+					});
+				},
+				byqxClick: function(platform) {
+					//毕业去向提交成功
+					zhuge.track('byqxClick', {
+						'设备信息': platform
+					});
+				},
+				zxysSqClick: function(type) {
+					//在线验证点击申请    
+					zhuge.track('zxysSqClick', {
+						'类型': type //学籍、学历
+					});
+				},
+				dctpIndexClick: function(name, platform) {
+					//调查投票首页点击事件
+					zhuge.track('dctpIndexClick', {
+						'点击区域': name, //学籍、学历
+						'设备信息': platform
+					});
+				},
+				lwccClick: function(from) {
+					//毕业论文查重
+					zhuge.track('bylwccClick', {
+						'来源': from
+					});
+				}
+			}
+		</script>
+		<script>
+			// 百度统计
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?ed4ddcd4078a486f1f5760a6c426b738";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+	</head>
+	<body>
+		<div id="browserinspect" class="browserinspect">
+			<div>您的浏览器版本太低了，无法使用本网站的所有功能。请升级到最新版浏览器，推荐下载使用浏览器IE9+、Firefox、Chrome等。<div id="browserinspectclose"><a
+						id="browserinspecta"><span id="browserinspectcc">Close</span><span
+							aria-hiden="true">×</span></a></div>
+			</div>
+			<style>
+				.browserinspect {
+					position: absolute;
+					position: fixed;
+					z-index: 111111;
+					width: 100%;
+					top: 0px;
+					left: 0px;
+					display: none;
+					border-bottom: 1px solid #A29330;
+					background: #FDF2AB no-repeat 13px center url(https://t1.chei.com.cn/common/ch/browser/images/dialog-warning.png);
+					text-align: left;
+					cursor: pointer;
+					font: 13px Arial, sans-serif;
+					color: #000;
+				}
+
+				.browserinspect div {
+					padding: 5px 36px 5px 40px;
+				}
+
+				.browserinspect>div>a,
+				.browserinspect>div>a:visited {
+					color: #E25600;
+					text-decoration: underline;
+				}
+
+				#browserinspectclose {
+					position: absolute;
+					right: 6px;
+					top: -2px;
+					height: 20px;
+					width: 12px;
+					font: 18px bold;
+					padding: 0;
+				}
+
+				#browserinspecta {
+					display: block;
+				}
+
+				#browserinspectcc {
+					display: block;
+					position: absolute;
+					top: -99999px;
+				}
+			</style>
+		</div>
+		<style type="text/css">
+			.webuploader-container .webuploader-pick {
+				position: relative;
+				display: inline-block;
+				cursor: pointer;
+				color: #fff;
+				text-align: center;
+				border-radius: 0;
+				overflow: hidden;
+				padding: 0 30px;
+				background: #25b887;
+			}
+
+			.pdf-show {
+				float: left;
+				display: inline-block;
+				border: 1px solid #ccc;
+				padding: 0 10px;
+				width: 144px;
+				height: 32px;
+				margin-right: 5px;
+			}
+
+			.pdf-show .item {
+				display: inline-block;
+				width: 144px;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+			}
+
+			.ctl-btn {
+				vertical-align: 12px;
+			}
+
+			.main {
+				position: relative;
+			}
+
+			.ch-robot {
+				position: absolute;
+				right: -60px;
+				top: 0;
+				display: block;
+				width: 50px;
+				height: 77px;
+				margin-bottom: 10px;
+				background: url('https://t4.chei.com.cn/common/images/help/jqr.png') no-repeat;
+			}
+
+			.ch-robot:hover {
+				background-position: -52px 0;
+				text-decoration: none;
+			}
+
+			/*专业变化入口*/
+			a.zybh-rk-btn {
+				display: block;
+				padding: 3px;
+				margin: 10px 10px 20px;
+				border-radius: 6px;
+			}
+
+			/*毕业论文查重*/
+			a.lwcc-rk-btn {
+				display: block;
+				margin: 5px 10px 10px;
+			}
+		</style>
+		<script type="text/javascript">
+			zhugeFun.init();
+			$(function() {
+				var identityTag = '8a0e840f90993e00dcb7efba0fe7669d';
+				if (identityTag != 'Anonymous') {
+					zhuge.identify(identityTag);
+				}
+			})
+		</script>
+		<div class="outer-layer">
+			<div class="outer-layer-content">
+
+
+
+
+
+
+
+
+
+
+
+				<link rel="stylesheet" href="https://t1.chei.com.cn/common/css/animate.css">
+				<img src="https://t1.chei.com.cn/common/wap/images/share_xxda.jpg?v=1477569249589" width="0" height="0"
+					style="position: absolute;top:-100px;left: 0">
+				<style type="text/css">
+					.header-nav .header-nav-bg {
+						height: 220px;
+					}
+
+					.header-nav dd {
+						height: 212px;
+					}
+				</style>
+				<div class="header">
+					<div class="width1180 clearfix">
+						<div class="logo"><a href="/archive/index.jsp" target="_parent" class="home"></a></div>
+						<div class="homePage-nav" style="margin-left:28px;">
+							<a href="/archive/index.action?trnd=70268670539716986328171897792455">首页</a>
+						</div>
+						<div id="nav-first" class="header-nav">
+							<dl id="gdjy-nav">
+								<dt>高等教育信息<span class="sanjiao" style="display: none;"></span></dt>
+								<dd style="display: none">
+									<ul class="sub_nav_mian" style="">
+										<li>学籍信息</li>
+										<li>图像校对</li>
+										<li>学历信息</li>
+										<li>学位信息</li>
+										<li>考研信息</li>
+									</ul>
+								</dd>
+							</dl>
+							<dl id="bab-nav" class="active">
+								<dt>在线验证报告<span class="sanjiao" style=""></span></dt>
+								<dd style="display: none">
+									<ul class="sub_nav_mian" style="">
+										<li class="active">首页</li>
+										<li>高等学籍</li>
+										<li>高等学历</li>
+										<li>学位</li>
+										<li>协助申请</li>
+									</ul>
+								</dd>
+							</dl>
+							<dl id="rzbg-nav">
+								<dt>学历学位认证与成绩验证<span class="sanjiao" style="display: none;"></span></dt>
+								<dd style="display: none">
+									<ul class="sub_nav_mian" style="">
+										<li>首页</li>
+										<li>绑定报告</li>
+									</ul>
+								</dd>
+							</dl>
+							<dl id="gjhz-nav">
+								<dt>出国报告发送<span class="sanjiao" style="display: none;"></span></dt>
+								<dd style="display: none">
+									<ul class="sub_nav_mian" style="">
+										<li>首页</li>
+										<li>传输费用</li>
+										<li>英文翻译</li>
+									</ul>
+								</dd>
+							</dl>
+							<dl>
+								<dt id="vote-nav">调查/投票<span class="sanjiao" style="left: 46px; display: none;"></span>
+								</dt>
+								<dd style="display: none">
+									<ul class="sub_nav_mian" style="">
+										<li>首页</li>
+										<li>跟踪调查</li>
+										<li
+											onmousedown="gaTrackerOutboundLink(this,'jygz', 'click', 'survey_jygz_menu')">
+											就业跟踪</li>
+										<li>专业推荐</li>
+										<li>专业满意度</li>
+										<li>院校满意度</li>
+									</ul>
+								</dd>
+							</dl>
+							<dl>
+								<dt id="xz-nav"><a href="https://xz.chsi.com.cn/survey/index.action" class="xz-link"
+										target="_blank">职业测评</a></dt>
+								<dd style="display: none">
+									<ul class="sub_nav_mian" style="">
+										<li><a href="https://xz.chsi.com.cn/home.action"
+												onmousedown="zhugeFun.goXz('frommenu','xzIndex')" target="_blank">首页</a>
+										</li>
+										<li><a href="https://xz.chsi.com.cn/speciality/index.action"
+												onmousedown="zhugeFun.goXz('frommenu','xzZybk')"
+												target="_blank">专业洞察</a></li>
+										<li><a href="https://xz.chsi.com.cn/survey/index.action"
+												onmousedown="zhugeFun.goXz('frommenu','xzZycp')"
+												target="_blank">职业测评</a></li>
+										<li><a href="https://xz.chsi.com.cn/occupation/index.action"
+												onmousedown="zhugeFun.goXz('frommenu','xzZhiybk')"
+												target="_blank">职业探索</a></li>
+										<li><a href="https://xz.chsi.com.cn/occucase/index.action"
+												onmousedown="zhugeFun.goXz('frommenu','xzZyrw')"
+												target="_blank">职业人物</a></li>
+										<li><a href="https://xz.chsi.com.cn/jyzdk/index.action"
+												onmousedown="zhugeFun.goXz('frommenu','xzJyzdk')"
+												target="_blank">就业指导课</a></li>
+									</ul>
+								</dd>
+							</dl>
+							<dl>
+								<dt id="ncss-nav"><a href="https://www.ncss.cn/"
+										onmousedown="gaTrackerOutboundLink(this,'ncssindex', 'click', 'frommenu');zhugeFun.goNcss('frommenu','ncssindex')"
+										target="_blank" class="jy-link">就业</a></dt>
+								<dd style="display: none">
+									<ul class="sub_nav_mian" style="">
+										<li><a href="https://www.ncss.cn/"
+												onmousedown="gaTrackerOutboundLink(this,'ncssindex', 'click', 'frommenu');zhugeFun.goNcss('frommenu','ncssindex')"
+												target="_blank">首页</a></li>
+										<li><a href="https://job.ncss.cn/student/jobs/index.html"
+												onmousedown="gaTrackerOutboundLink(this,'ncsszw', 'click', 'frommenu');zhugeFun.goNcss('frommenu','ncsszw')"
+												target="_blank">职位</a></li>
+										<li><a href="https://job.ncss.cn/student/company/index.html"
+												onmousedown="gaTrackerOutboundLink(this,'ncssqy', 'click', 'frommenu');zhugeFun.goNcss('frommenu','ncssqy')"
+												target="_blank">企业</a></li>
+										<li><a href="https://job.ncss.cn/student/jobfair/index.html"
+												onmousedown="gaTrackerOutboundLink(this,'ncsszph', 'click', 'frommenu');zhugeFun.goNcss('frommenu','ncsszph')"
+												target="_blank">招聘会</a></li>
+									</ul>
+								</dd>
+							</dl>
+							<div class="header-nav-bg" style="display:none;">&nbsp;</div>
+						</div>
+
+						<div class="nav-userinfo">
+
+							<div class=" btn-group">
+								<div class="user dropdown-toggle" data-toggle="dropdown"><i class="iconfont"
+										title="个人中心"></i>个人中心<span class="caret"></span>
+								</div>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="https://account.chsi.com.cn/account/account!show" target="_blank"><i
+												class="iconfont" title="账号"></i>账号</a>
+									</li>
+
+									<li><a
+											href="https://account.chsi.com.cn/passport/logout?service=https://my.chsi.com.cn/archive/index.jsp"><i
+												class="iconfont" title="退出"></i>退出</a></li>
+								</ul>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+				<div class="sub_nav">
+					<div id="nav-second" class="width1180 clearfix">
+						<ul class="sub_nav_mian" style="display:none">
+							<li>学籍信息/图像校对</li>
+							<li>学历信息</li>
+							<li>学位信息</li>
+							<li>考研信息</li>
+						</ul>
+						<ul class="sub_nav_mian" style="">
+							<li class="active">首页</li>
+							<li>高等学籍</li>
+							<li>高等学历</li>
+							<li>学位</li>
+							<li>协助申请</li>
+						</ul>
+						<ul class="sub_nav_mian" style="display:none">
+							<li>首页</li>
+							<li>绑定报告</li>
+						</ul>
+						<ul class="sub_nav_mian" style="display:none">
+							<li>首页</li>
+							<li>传输费用</li>
+							<li>英文翻译</li>
+						</ul>
+						<ul class="sub_nav_mian" style="display:none">
+							<li>首页</li>
+							<li>跟踪调查</li>
+							<li onmousedown="gaTrackerOutboundLink(this,'jygz', 'click', 'survey_jygz_menu')">就业跟踪</li>
+							<li>专业推荐</li>
+							<li>专业满意度</li>
+							<li>院校满意度</li>
+						</ul>
+						<ul class="sub_nav_mian" style="display:none">
+							<li><a href="https://xz.chsi.com.cn/home.action"
+									onmousedown="zhugeFun.goXz('frommenu','xzIndex')" target="_blank">首页</a></li>
+							<li><a href="https://xz.chsi.com.cn/speciality/index.action"
+									onmousedown="zhugeFun.goXz('frommenu','xzZybk')" target="_blank">专业洞察</a></li>
+							<li><a href="https://xz.chsi.com.cn/survey/index.action"
+									onmousedown="zhugeFun.goXz('frommenu','xzZycp')" target="_blank">职业测评</a></li>
+							<li><a href="https://xz.chsi.com.cn/occupation/index.action"
+									onmousedown="zhugeFun.goXz('frommenu','xzZhiybk')" target="_blank">职业探索</a></li>
+							<li><a href="https://xz.chsi.com.cn/occucase/index.action"
+									onmousedown="zhugeFun.goXz('frommenu','xzZyrw')" target="_blank">职业人物</a></li>
+							<li><a href="https://xz.chsi.com.cn/jyzdk/index.action"
+									onmousedown="zhugeFun.goXz('frommenu','xzJyzdk')" target="_blank">就业指导课</a></li>
+						</ul>
+						<ul class="sub_nav_mian" style="display:none">
+							<li><a href="https://www.ncss.cn/"
+									onmousedown="gaTrackerOutboundLink(this,'ncssindex', 'click', 'frommenu');zhugeFun.goNcss('frommenu','ncssindex')"
+									target="_blank">首页</a></li>
+							<li><a href="https://job.ncss.cn/student/jobs/index.html"
+									onmousedown="gaTrackerOutboundLink(this,'ncsszw', 'click', 'frommenu');zhugeFun.goNcss('frommenu','ncsszw')"
+									target="_blank">职位</a></li>
+							<li><a href="https://job.ncss.cn/student/company/index.html"
+									onmousedown="gaTrackerOutboundLink(this,'ncssqy', 'click', 'frommenu');zhugeFun.goNcss('frommenu','ncssqy')"
+									target="_blank">企业</a></li>
+							<li><a href="https://job.ncss.cn/student/jobfair/index.html"
+									onmousedown="gaTrackerOutboundLink(this,'ncsszph', 'click', 'frommenu');zhugeFun.goNcss('frommenu','ncsszph')"
+									target="_blank">招聘会</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<script>
+					var SpathMy = 'https://my.chsi.com.cn/archive/';
+					var SpathGaoKao = 'https://my.chsi.com.cn/zyzsk/';
+				</script>
+				<script src="https://t3.chei.com.cn/archive/js/common/header-menu-1.1.6.js"></script>
+				<div class="main">
+					<a href="//kl.chsi.com.cn/robot/index.action?system=my" target="_blank" class="ch-robot"></a>
+
+
+
+
+
+
+
+
+					<div class="main-block zxyz-container border-shadow">
+						<ul class="zxyzbg-home-list">
+							<li class="clearfix">
+								<div class="list-l">
+									<h5>教育部学籍在线验证报告</h5>
+									<h6>Online Verification Report of Student Record (Current Students) </h6>
+									<p class="desc">《教育部学籍在线验证报告》是依据《高等学校学生学籍学历电子注册办法》（<a
+											href="https://www.chsi.com.cn/jyzx/201408/20140829/1245955796.html"
+											target="_blank">教学[2014]11号</a>）为学生本人提供的学籍注册信息网上查询验证服务。</p>
+								</div>
+								<div class="list-r">
+									<a class="green-btn mid-btn"
+										href="https://my.chsi.com.cn/archive/bab/xj/show.action?trnd=47946450109488648637666120071567">查看</a>
+								</div>
+							</li>
+
+							<li class="clearfix">
+								<div class="list-l">
+									<h5>教育部学历证书电子注册备案表</h5>
+									<h6>Online Verification Report of HE Qualification Certificate (Graduate Students)
+									</h6>
+									<p class="desc">《教育部学历证书电子注册备案表》是依据《高等学校学生学籍学历电子注册办法》（<a
+											href="https://www.chsi.com.cn/jyzx/201408/20140829/1245955796.html"
+											target="_blank">教学[2014]11号</a>）对学生本人提供的学历注册信息网上查询验证服务。</p>
+								</div>
+								<div class="list-r">
+									<a class="green-btn mid-btn"
+										href="https://my.chsi.com.cn/archive/bab/xl/show.action?trnd=47946450109488648637666120071567">查看</a>
+								</div>
+							</li>
+
+							<li class="clearfix">
+								<div class="list-l">
+									<h5>中国高等教育学位在线验证报告</h5>
+									<h6>Online Verification Report of Higher Education Degree Certificate</h6>
+									<p class="desc">
+										《中国高等教育学位在线验证报告》是依据《学位授予信息管理工作规程》（学位办〔2020〕8号）对学生本人提供的学位授予信息网上查询验证服务。</p>
+								</div>
+								<div class="list-r">
+									<a class="green-btn mid-btn"
+										href="https://my.chsi.com.cn/archive/bab/xw/show.action?trnd=47946450109488648637666120071567">查看</a>
+								</div>
+							</li>
+						</ul>
+
+						<div class="zxyz-i-b">
+							<h6><i class="iconfont bgjs"></i>报告介绍</h6>
+							<p>为满足求职招聘、派遣接收、升学（考研、专升本）、出国留学、干部任免、职称评定、信用评估等领域的需要，学信网依托全国高等教育学生信息数据库，对学生的学籍、学历、学位、招生录取等相关信息提供在线验证报告，如：《教育部学历证书电子注册备案表》、《教育部学籍在线验证报告》、《中国高等教育学位在线验证报告》等。验证报告由学信网提供在线验证功能，报告持有人登录网站在线验证页面，输入在线验证码即可免费验证报告内容。报告中的信息也可通过扫描二维验证码进行验证或手机上网再验证。报告可在验证有效期内多次打印、多次验证。
+							</p>
+							<a href="https://www.chsi.com.cn/xlcx/bgys.jsp" target="_blank">报告简介</a>　
+							<a href="https://www.chsi.com.cn/xlcx/tdhyt.jsp" target="_blank">特点和用途</a>　
+							<a href="https://www.chsi.com.cn/xlcx/rhsq.jsp" target="_blank">如何申请</a>　
+							<a href="https://www.chsi.com.cn/xlcx/tbsm.jsp" target="_blank">特别声明</a>
+						</div>
+					</div>
+					<script>
+						$(function() {
+							zhugeFun.pagePv('在线验证-首页', 'pc');
+						})
+					</script>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+		<div class="footer">
+			<a href="https://www.chsi.com.cn/" target="_blank">学信网</a>　|　<a href="/archive/help/index.action"
+				target="_blank">帮助中心</a>　|　Copyright © 2003-2024 学信网 All Rights Reserved<br>
+			<a href="https://beian.miit.gov.cn" target="_blank">京ICP备19004913号-1</a>　<a
+				href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010202009747" target="_blank"><img
+					src="https://t3.chei.com.cn/chsi/images/jgwab.png"
+					style="vertical-align: middle;margin-bottom: 2px;margin-left: 8px;"> 京公网安备11010202009747号</a>
+		</div>
+		<div id="loader"></div>
+		<script type="text/javascript" src="https://t1.chei.com.cn/common/plugins/validation/jquery.validate.min.js">
+		</script>
+		<script type="text/javascript" src="https://t2.chei.com.cn/archive/js/jquery/jquery.form.js"></script>
+		<script type="text/javascript" src="https://t1.chei.com.cn/common/bootstrap3.3.5/js/bootstrap.min.js"></script>
+		<script type="text/javascript"
+			src="https://t1.chei.com.cn/common/bootstrap-datetimepicker-v3/bootstrap-datetimepicker.min.js"></script>
+		<script src="https://t2.chei.com.cn/archive/js/common/ie-prompt.min.js"></script>
+		<link rel="stylesheet" href="https://t2.chei.com.cn/archive/js/webuploader/webuploader.css">
+		<script src="https://t4.chei.com.cn/archive/js/webuploader/webuploader.js"></script>
+
+
+	</body>
+</html>
