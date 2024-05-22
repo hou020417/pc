@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		function getN(n) {
+			n = n && parseInt(n);
+			if (n == 1 || n == 2) {
+				return 1;
+			}
+			const prev1 = getN(n - 1)
+			const prev2 = getN(n - 2)
+			return prev1 + prev2
+			if (n % 2) {
+				return 2 * (prev1 + prev2)
+			} else {
+				return prev1 + prev2
+			}
+		}
+		function getNs(n) {
+			if (n == 1 || n == 2) {
+				return 1;
+			}
+			let f = new Array(n);
+			f[0] = 1
+			f[1] = 1
+			for (let i = 2; i < n; i++) {
+				if(i % 2 ){
+					f[i] = (f[i - 1] + f[i - 2])*2
+				}else{
+					f[i] = f[i - 1] + f[i - 2]
+				}
+			}
+			return f
+		}
+			console.log(getN(6))
+			console.log(getNs(6))
+			function getIndex(array) {
+				let min = Infinity;
+				let secondMin = Infinity;
+				let minIndex = -1;
+				let indexs = -1;
+				for (let i = 0; i < array.length; i++) {
+					if (array[i] > 0 && array[i] < min) {
+						secondMin = min;
+						indexs = minIndex;
+						min = array[i];
+						minIndex = i
+					} else if (array[i] > 0 && array[i] < secondMin && array[i] !== min) {
+						secondMin = array[i];
+						indexs = i;
+					}
+				}
+				if (indexs === -1) {
+					return 1;
+				}
+				return indexs;
+			}
+			let array = [1, -1, 3, 2, 0]
+			console.log(getIndex(array))
+	</script>
+</html>
