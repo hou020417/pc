@@ -397,7 +397,7 @@
 							<li>首页</li>
 							<li class="xueji">高等学籍</li>
 							<li class="xueli active">高等学历</li>
-							<li>学位</li>
+							<li class="xuewei">学位</li>
 							<li>协助申请</li>
 						</ul>
 						<ul class="sub_nav_mian" style="display:none">
@@ -595,7 +595,7 @@
 							<div class="mb-title">
 								<div class="shuixin">
 									<!-- <img src="../../img/xuexinbj.jpg"> -->
-									本科-郑州商学院-计算机科学与技术
+									<span id="benke" style="font-size: 16px;">本科</span><span id="xueshi" style="font-size: 16px;display: none;">学士</span>-郑州商学院-计算机科学与技术
 								</div>
 									
 								</div>
@@ -636,15 +636,35 @@
 									<tr class="hasborder" id="show" style="visibility: collapse;">
 										<td>
 											<a class="blue"
-												href="https://hou020417.github.io/yidongh5/#/pages/index/index"
-												target="_blank">AER3KA1TSWVAK6X9</a>
+												href="https://hou020417.github.io/yidongh5/#/pages/index/AD16404JYJLARTYT"
+												target="_blank">AD16404JYJLARTYT</a>
 										</td>
 										<td>中文</td>
 										<td>2024-06-19</td>
 										<td>有效</td>
 										<td>
 											<a class="blue"
-												href="https://hou020417.github.io/yidongh5/#/pages/index/index"
+												href="https://hou020417.github.io/yidongh5/#/pages/index/AD16404JYJLARTYT"
+												target="_blank">查看</a>
+											<a
+												href="https://my.chsi.com.cn/archive/bab/xl/prolong.action?bgid=r8kjm06c76fn9yy6">延长验证有效期</a>
+									
+											<a href="javascript:void(0)"
+												onclick="closeReport('r8kjm06c76fn9yy6')">关闭</a>
+										</td>
+									</tr>
+									<tr class="hasborder" id="shows" style="visibility: collapse;">
+										<td>
+											<a class="blue"
+												href="https://hou020417.github.io/yidongh5/#/pages/index/XBHKJ2CWMLAHURNG"
+												target="_blank">XBHKJ2CWMLAHURNG</a>
+										</td>
+										<td>中文</td>
+										<td>2024-06-19</td>
+										<td>有效</td>
+										<td>
+											<a class="blue"
+												href="https://hou020417.github.io/yidongh5/#/pages/index/XBHKJ2CWMLAHURNG"
 												target="_blank">查看</a>
 											<a
 												href="https://my.chsi.com.cn/archive/bab/xl/prolong.action?bgid=r8kjm06c76fn9yy6">延长验证有效期</a>
@@ -716,6 +736,15 @@
 							$('.xueji').addClass('active')
 							$('#show').css({'visibility':'visible'})
 							$('#hide').css({'visibility':'collapse'})
+						}
+						if(name == 2){
+							$('.xueli').removeClass('active')
+							$('.xuewei').addClass('active')
+							$('#shows').css({'visibility':'visible'})
+							$('#show').css({'visibility':'collapse'})
+							$('#hide').css({'visibility':'collapse'})
+							$('#benke').css({'display':'none'})
+							$('#xueshi').css({'display':'inline-block'})
 						}
 						$(function() {
 							zhugeFun.pagePv('在线验证-学历', 'pc');

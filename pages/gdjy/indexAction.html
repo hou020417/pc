@@ -85,37 +85,42 @@
 			.checkbox-trans-list-leave-active {
 				position: absolute;
 			}
-			.context{
+
+			.context {
 				margin: 3px 1px;
 				/* display: flex;
 				justify-content: space-between; */
 			}
-			.contextTop{
+
+			.contextTop {
 				display: flex;
 				justify-content: space-between;
 			}
-			.topLeft{
+
+			.topLeft {
 				font-size: 19px;
 				line-height: 1;
 			}
-			.topRight{
+
+			.topRight {
 				background: rgba(26, 163, 110, 1);
 				border-radius: 10px;
 				padding: 1px 9px;
 				font-size: 12px;
 			}
-			.contextBottom{
+
+			.contextBottom {
 				font-size: 13.5px;
 				text-align: left;
 				margin-top: 12px;
 			}
-			
 		</style>
 	</head>
 	<body style="font-size: 12px;">
 		<div id="app" class="my-container">
 			<div class="green-header van-nav-bar van-hairline--bottom" style="z-index: 1;">
-				<div class="van-nav-bar__left" onclick="back()"><i class="van-icon van-icon-arrow-left van-nav-bar__arrow">
+				<div class="van-nav-bar__left" onclick="back()"><i
+						class="van-icon van-icon-arrow-left van-nav-bar__arrow">
 					</i>
 				</div>
 				<div class="van-ellipsis van-nav-bar__title">高等教育信息</div>
@@ -159,12 +164,26 @@
 					</div>
 				</div>
 				<div class="list-tit van-row">
-					<div class="l van-col van-col--8">学位信息
+					<div class="l van-col van-col--8">学位信息 (1)
 						<!---->
 					</div>
 					<div class="r van-col van-col--16">还有学位没有显示出来？<a href="javascript:;">尝试绑定</a></div>
 				</div>
-				<div class="no-data">
+				<div class="xw list-card">
+					<!----> 
+					<a style="display: block;" href="./detaily.html">
+						<div class="context" style="color: #fff;">
+							<div class="contextTop">
+								<div class="topLeft">郑州商学院</div>
+								<div class="topRight" style="background-color: rgba(65, 91, 210, 1);">学士</div>
+							</div>
+							<div class="contextBottom">
+								<div>工学学士学位</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="no-data" style="display: none;">
 					<h4 style="padding: 0px 0.3rem;">您还未绑定学位信息，可以使用“尝试绑定学位”功能绑定您的学位 <a
 							href="https://www.chsi.com.cn/help/cxfw.jsp" target="_blank"><i title="查看"
 								class="iconfont"></i></a></h4>
@@ -191,10 +210,10 @@
 					</div>
 					<div class="find-xjxl-bottom" id="show">
 						<span class="colorGreen">提示信息 <i title="展开" class="iconfont"></i>
-								</span>
+						</span>
 					</div>
 					<div class="find-xjxl-bottom" id="hide" style="display: none;">
-					                    收起 <i title="收起" class="iconfont"></i></div>
+						收起 <i title="收起" class="iconfont"></i></div>
 				</div>
 				<div class="list-tit van-row">
 					<div class="l van-col van-col--24">考研信息
@@ -228,31 +247,41 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<script type="text/javascript">
-			
-			$(document).ready(function(){
-				$('#show').click(function(){
+			$(document).ready(function() {
+				$('#show').click(function() {
 					$('.find-xjxl').addClass('find-xjxl-show')
-					$('#show').css({'display':'none'})
-					$('#hide').css({'display':'block'})
+					$('#show').css({
+						'display': 'none'
+					})
+					$('#hide').css({
+						'display': 'block'
+					})
 				})
 			})
-			function back(){
-				 window.history.back();
+
+			function back() {
+				window.history.back();
 			}
-			function xuexin(){
+
+			function xuexin() {
 				window.location.href = './detail.html'
 			}
-			function xueji(){
+
+			function xueji() {
 				window.location.href = './details.html'
 			}
 		</script>
 		<script>
-			$(document).ready(function(){
-				$('#hide').click(function(){
-					$('#hide').css({'display':'none'})
-					$('#show').css({'display':'block'})
+			$(document).ready(function() {
+				$('#hide').click(function() {
+					$('#hide').css({
+						'display': 'none'
+					})
+					$('#show').css({
+						'display': 'block'
+					})
 					$('.find-xjxl').removeClass('find-xjxl-show')
 				})
 			})
