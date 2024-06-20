@@ -7,6 +7,19 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
     <title>中央广播电视中等专业学校毕业生登记表验证结果</title>
+	<script src="../js/jquery.min.js"></script>
+	<script>
+	    $(window).load(function() {
+	        var h = $('.table table').height();
+	        $('.bg').height(h + 'px');
+			 var nowDate = new Date();
+			 var year = nowDate.getFullYear();
+			 var month = nowDate.getMonth() + 1 < 10 ? "0" + (nowDate.getMonth() + 1) : nowDate.getMonth() + 1;
+			 var date = nowDate.getDate() < 10 ? "0" + nowDate.getDate() : nowDate.getDate();
+			$('.time').text(year + "-" + month + "-" + date)
+	    });
+		
+	</script>
 </head>
 
 <body class="tableBody">
@@ -86,7 +99,7 @@
 </body>
 
 </html>
-<script src="../js/jquery.min.js"></script>
+<!-- <script src="../js/jquery.min.js"></script>
 <script>
     $(window).load(function() {
         var h = $('.table table').height();
@@ -98,4 +111,4 @@
 		$('.time').text(year + "-" + month + "-" + date)
     });
 	
-</script>
+</script> -->
