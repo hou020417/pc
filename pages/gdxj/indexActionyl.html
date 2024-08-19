@@ -1,0 +1,328 @@
+<html data-dpr="1" style="font-size: 39.04px;">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no,viewport-fit=cover">
+		<title>学信档案</title>
+		<link rel="icon" href="https://t1.chei.com.cn/archive/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="https://t2.chei.com.cn/archive/mobile/css/app.css?v=20240717">
+		<link rel="stylesheet" href="https://t1.chei.com.cn/common/ch/iconfont.css">
+		<style>
+			.extra-wrap {
+				display: flex;
+				align-items: center;
+			}
+
+			.extra-wrap .red {
+				margin-right: 5px;
+				color: #e85759;
+			}
+
+			.vote-order-ul li {
+				align-items: center;
+			}
+
+			.vote-order-ul .vue-checkbox {
+				display: inline-block;
+				margin-right: 10px;
+				white-space: nowrap;
+				position: relative;
+				line-height: 1;
+				vertical-align: middle;
+				cursor: pointer;
+				outline: 0;
+			}
+
+			.vote-order-ul .vue-checkbox .vue-checkbox-inner {
+				display: inline-block;
+				position: relative;
+				width: .426rem;
+				height: .426rem;
+				top: 0;
+				left: 0;
+				background-color: #fff;
+				border: 1px solid #969799;
+				border-radius: 2px;
+				transition: all .2s ease-in-out;
+			}
+
+			.vote-order-ul .vue-checkbox .checked-box-order {
+				display: inline-block;
+				position: relative;
+				width: .426rem;
+				height: .426rem;
+				top: 0;
+				left: 0;
+				color: #fff;
+				border-radius: 2px;
+				text-align: center;
+				background-color: #25b887;
+				border: 1px solid #25b887;
+				transition: all .2s ease-in-out;
+			}
+
+			.jy-vote .sub_sub_title {
+				font-size: .373rem;
+				margin-top: 0.45rem;
+				font-weight: 700;
+			}
+
+			.checkbox-trans-list-item {
+				transition: all 1s;
+				display: inline-block;
+				margin-right: 10px;
+			}
+
+			.checkbox-trans-list-enter,
+			.checkbox-trans-list-leave-to {
+				opacity: 0;
+				transform: translateY(30px);
+			}
+
+			.checkbox-trans-list-leave-active {
+				position: absolute;
+			}
+
+			.gxbys-vote .line-input {
+				-webkit-appearance: none;
+				border-radius: 0;
+			}
+
+			/* 重写字体 */
+			.nameFamily {
+				font-family: Chsi, "rare-words-font";
+			}
+		</style>
+
+		<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-100524-5"></script>
+		<script>
+			// 放在ga.jsp 中
+			function gaTrackerOutboundLink(ele, eventCategory, eventAction, eventLabel) {
+				gtag('event', eventAction, {
+					'event_category': eventCategory,
+					'event_label': eventLabel
+				});
+				return true;
+			}
+			window.dataLayer = window.dataLayer || [];
+
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+			gtag('config', 'UA-100524-5', {
+				'sample_rate': 5
+			});
+		</script>
+		<script>
+			// 百度统计
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?ed4ddcd4078a486f1f5760a6c426b738";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+	</head>
+	<body style="font-size: 12px;">
+		<div id="app" class="my-container"><img src="https://t1.chei.com.cn/common/wap/images/share_xxda.jpg" width="0"
+				height="0" style="position: absolute; top: -100px; left: 0px;">
+			<div class="my-header"><a href="/archive/wap/index.jsp" class="logo"></a> <a onclick="logoutFn(event);"
+					id="goOut"
+					href="https://account.chsi.com.cn/passport/logout?service=https://my.chsi.com.cn/archive/index.jsp"
+					class="go-out"><i title="退出" class="iconfont"></i></a></div>
+			
+			<div class="menu-part">
+				<div class="van-row">
+					<div class="van-col van-col--8"><a href="./indexsyl.html"
+							class="menu-a"><span class="menu-img xjxl-img"></span><br>
+							高等教育信息
+						</a></div>
+					<div class="van-col van-col--8"><a href="./indexyl.html"
+							class="menu-a"><span class="menu-img zxyz-img"></span><br>
+							在线验证报告
+						</a></div>
+					<div class="van-col van-col--8"><a href="https://my.chsi.com.cn/archive/rzbg/index.action"
+							class="menu-a"><span class="menu-img rzbg-img"></span><br>
+							学历学位认证<br>与成绩验证
+						</a></div>
+				</div>
+				<div class="van-row">
+					<div class="van-col van-col--8"><a href="https://my.chsi.com.cn/archive/gjhz/index.action"
+							class="menu-a"><span class="menu-img gjhz-img"></span><br>
+							出国报告发送
+						</a></div>
+					<div class="van-col van-col--8"><a href="https://my.chsi.com.cn/archive/wap/gdjy/xj/collate.action"
+							class="menu-a"><span class="menu-img txjd-img"></span><br>
+							毕业证书图像<br>校对
+						</a></div>
+					<div class="van-col van-col--8"><a href="https://www.ncss.cn/" class="menu-a"><span
+								class="menu-img xzy-img"></span><br>
+							就业
+						</a></div>
+				</div>
+				<div class="van-row">
+					<div class="van-col van-col--8"><a href="https://my.chsi.com.cn/archive/survey/index.action"
+							class="menu-a"><span class="menu-img myd-img"></span><br>
+							学校满意度
+						</a></div>
+					<div class="van-col van-col--8"><a href="https://xz.chsi.com.cn/survey/wap/index.action"
+							class="menu-a"><span class="menu-img cp-img"></span><br>
+							个人测评
+						</a></div>
+					<div class="van-col van-col--8"><a href="https://my.chsi.com.cn/archive/wap/auth/show.action"
+							class="menu-a sq-num">
+							<!----> <span class="menu-img auth-img"></span><br>
+							信息核查确认
+						</a></div>
+				</div>
+			</div>
+			<div class="van-hairline--top-bottom van-tabbar van-tabbar--fixed" style="z-index: 1000;">
+				<div class="van-tabbar-item van-tabbar-item--active">
+					<div class="van-tabbar-item__icon"><i title="home" class="iconfont"></i>
+						<!---->
+					</div>
+					<div class="van-tabbar-item__text"> <span>首页</span></div>
+				</div>
+				<div class="van-tabbar-item" onclick="tiao()">
+					<div class="van-tabbar-item__icon"><img src="https://t1.chei.com.cn/archive/images/xj/xjxlxw.svg"
+							style="height: 0.613rem; margin: -0.04rem 0px 0.04rem;">
+						<!---->
+					</div>
+					<div class="van-tabbar-item__text"> <span>学籍学历学位</span></div>
+				</div>
+				<div class="van-tabbar-item" onclick="cp()">
+					<div class="van-tabbar-item__icon"><i title="cp" class="iconfont"></i>
+						<!---->
+					</div>
+					<div class="van-tabbar-item__text"> <span>个人测评</span></div>
+				</div>
+				<div class="van-tabbar-item" onclick="zp()">
+					<div class="van-tabbar-item__icon"><i title="zp" class="iconfont"></i>
+						<!---->
+					</div>
+					<div class="van-tabbar-item__text"> <span>求职招聘</span></div>
+				</div>
+				<div class="van-tabbar-item" onclick="my()">
+					<div class="van-tabbar-item__icon"><i title="my" class="iconfont"></i>
+						<!---->
+					</div>
+					<div class="van-tabbar-item__text"> <span>我的</span></div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			function tiao(){
+				location.href = './indexsyl.html'
+			}
+			function cp(){
+				window.location.href = 'https://xz.chsi.com.cn/survey/index.action'
+			}
+			function zp(){
+				window.location.href = 'https://www.ncss.cn/student/m/index.html'
+			}
+			function my(){
+				window.location.href = 'https://my.chsi.com.cn/archive/wap/my.jsp'
+			}
+			var myVue = new Vue({
+				el: '#app',
+				data: function() {
+					return {
+						activeBottom: 0,
+						topText: '学信档案' //标题文字
+					}
+				},
+				mixins: typeof mixin != 'undefined' ? [mixin] : {},
+				created: function() {},
+				methods: {
+					onClickLeft: function() { //左上的返回按钮
+						history.back(-1);
+					},
+					goToIndex: function() {
+						window.location.href = 'https://my.chsi.com.cn/archive/wap/index.action';
+					},
+					getQueryString: function(name) { //获取地址栏参数
+						var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+						var r = window.location.search.substr(1).match(reg);
+						if (r != null) {
+							return unescape(r[2]);
+						}
+						return null;
+					},
+					VoteGoToIndex: function() { //投票完成返回首页
+						var _from = this.getQueryString('from');
+						if (_from == 'archive-dctp-wap') {
+							window.location.href = 'https://my.chsi.com.cn/archive/survey/index.action';
+						} else {
+							window.location.href = 'https://my.chsi.com.cn/archive/wap/index.action';
+						}
+					},
+					addCookie: function(name, value) { //设置cookie
+						var cookieString = name + "=" + escape(value);
+						document.cookie = cookieString;
+						document.cookie.setSecure = true; //只允许在https环境下使用cookie
+					},
+					getCookie: function(name) {
+						var strCookie = document.cookie;
+						var arrCookie = strCookie.split("; ");
+						for (var i = 0; i < arrCookie.length; i++) {
+							var arr = arrCookie[i].split("=");
+							if (arr[0] == name) return arr[1];
+						}
+						return "";
+					},
+					trimSpace: function(s) { //去掉左右空格
+						return s.replace(/(^\s*)|(\s*$)/g, "");
+					},
+					showSfhyOrder: function() {
+						//展示身份核验方式的序号，动态组合显示方式一、二、三
+						var nodeList = document.getElementsByClassName('verify-list')[0].getElementsByTagName("li");
+						var liLen = nodeList.length;
+						for (var i = 0; i < liLen; i++) {
+							nodeList[i].getElementsByTagName('div')[0].innerText = '方式 ' + (i + 1);
+						}
+					},
+					noticeFace: function(from) {
+						var _this = this;
+						api.syncAjax('post', 'https://my.chsi.com.cn/archive/gdjy/check/face/notice.action', {
+							data: {
+								from: from
+							}
+						}).then(function(res) {
+							if (res.status == 0) {
+								window.location.href = res.result;
+							} else {
+								_this.$toast(res.message);
+							}
+						});
+					}
+				}
+			});
+		</script>
+
+		<script type="text/javascript">
+			//解决手机浏览器自带返回 没刷新问题
+			(function() {
+				var isPageHide = false;
+				window.addEventListener('pageshow', function() {
+					if (isPageHide) {
+						var curUrl = window.location.href,
+							curIndex = curUrl.substring(curUrl.indexOf('wap/') + 4);
+						if (curIndex == 'my.jsp') {
+							myVue.$data.activeBottom = 4;
+						} else {
+							myVue.$data.activeBottom = 0;
+						}
+					}
+				});
+				window.addEventListener('pagehide', function() {
+					isPageHide = true;
+				});
+			})();
+		</script>
+
+	</body>
+</html>
