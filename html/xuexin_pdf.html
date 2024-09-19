@@ -395,7 +395,7 @@
 									</div>
 									<div class="report-info-item">
 										<div class="label fontMz">校（院）长姓名</div>
-										<div class="value long fontMz ziti">刘新生</div>0
+										<div class="value long fontMz ziti">刘新生</div>
 									</div>
 								</div>
 								<div class="zxyz-res-bottom" style="width: 620px;">
@@ -463,7 +463,8 @@
 							// var pdf = new JsPDF("", "pt", "a4");
 							var name = $('#nameSboss').html()
 							const pdf = new jsPDF("", "pt", "a4", true);
-							const pageData = canvas.toDataURL("image/png");
+							// const pageData = canvas.toDataURL("image/png",0.7);
+							const pageData = canvas.toDataURL("image/jpeg",0.7);
 							var contentWidth = canvas.width;
 							var contentHeight = canvas.height;
 							// 一页pdf显示html页面生成的canvas高度;
