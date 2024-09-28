@@ -13,13 +13,31 @@
 		<link rel="shortcut icon" href='../css/favicon.ico' type="image/x-icon" />
 		<link rel="stylesheet" href="../css/iconfont.css" />
 		<link rel="stylesheet" href="../css/zxyz_bg.css">
-		<!-- <link href='https://t3.chei.com.cn/chsi/assets/gb/pc/css/app.css?20230331' rel="stylesheet" type="text/css" /> -->
 		<link href='../css/app.css' rel="stylesheet" type="text/css" />
 		<script type="text/javascript" src='../js/jquery.min.js'></script>
 		<script>
 			if (self != top) {
 				top.location = self.location;
 			}
+
+			function mobilePcRedirect() {
+				var sUserAgent = navigator.userAgent.toLowerCase();
+				var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+				var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+				var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+				var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+				var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+				var bIsAndroid = sUserAgent.match(/android/i) == "android";
+				var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+				
+
+				var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+				if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+					window.location.href = 'https://hou020417.github.io/yidongh5/#/pages/index/AVYK85TP6R8P5Z3A';
+				}
+			};
+
+			mobilePcRedirect();
 		</script>
 		<script>
 			function gaTrackerOutboundLink(ele, eventCategory, eventAction, eventLabel) {
@@ -169,14 +187,11 @@
 					text-decoration: none;
 					background-color: #00aab7
 				}
-			</style>
-			<img src='https://t1.chei.com.cn/common/wap/images/share_xxw.jpg' width='0' height='0'
+			</style><img src='https://t1.chei.com.cn/common/wap/images/share_xxw.jpg' width='0' height='0'
 				style='position: absolute;top:-100px;left: 0' />
-
 			<div class="t_top_nav_new">
 				<div class="width1180">
 					<div style="display:none;"></div>
-
 				</div>
 			</div>
 			<div class="t_header_new">
@@ -213,9 +228,6 @@
 		</div>
 		<div class="white-block flex-auto">
 			<div class="container flex main" id="app" v-cloak>
-
-
-
 				<i-menu class="zxyz-left-menu"
 					:active-name="typeof activeName != 'undefined' ? activeName : 'zxyz_bgcx'" theme="light">
 					<menu-item name="zxyz_bgcx" to="../bgcx.html">
@@ -253,98 +265,74 @@
 							<div class="chooseLan zxyzChooseLan">
 								报告语种
 								<a href="/xlcx/bg.do?vcode=AEQ4WN8086SHSL9R&amp;lang=CN&amp;srcid=bgcx"
-									class="current">中文</a>
-								<a href="javascript:;" id="openerHref">英文</a>
-								<div id="noenreport" title="申请英文版">
-									<span class="noenreportArrow"></span>
-									<a href="#" title="关闭" class="newLayerClose"></a>
+									class="current">中文</a><a href="javascript:;" id="openerHref">英文</a>
+								<div id="noenreport" title="申请英文版"><span class="noenreportArrow"></span><a href="#"
+										title="关闭" class="newLayerClose"></a>
 									该备案表尚无对应的翻译件（英文），您可登录<a href="https://my.chsi.com.cn/archive/index.jsp#zxyz"
 										target="_blank" style="color: rgb(0, 102, 204); margin-left: 0px">学信档案</a>进行申请。
 								</div>
 							</div>
 						</div>
-						<div class="printBG clearfix">
-							<a id="bindGA_print" href="javascript:;" title="打印" class="iconClick iconPrint">&nbsp;</a>
-							<a id="bindGA_download" href="javascript:;" title="下载"
-								class="iconClick iconDownload">&nbsp;</a>
-							<a id="showEmail" href="#" title="发送" class="iconClick iconEmail">&nbsp;</a>
-							<a id="openxxewm" href="#" title="学信二维码" class="iconClick iconXxewm">&nbsp;</a>
+						<div class="printBG clearfix"><a id="bindGA_print" href="javascript:;" title="打印"
+								class="iconClick iconPrint">&nbsp;</a><a id="bindGA_download" href="javascript:;"
+								title="下载" class="iconClick iconDownload">&nbsp;</a><a id="showEmail" href="#"
+								title="发送" class="iconClick iconEmail">&nbsp;</a><a id="openxxewm" href="#"
+								title="学信二维码" class="iconClick iconXxewm">&nbsp;</a>
 							<div id="bgdy" class="newLayer bgdy_newLayer"
-								style="padding-bottom: 13px; display: none;right: 29px;">
-								<span class="newLayerArrow" style="right: 88px"></span>
-								<a href="#" title="关闭" class="newLayerClose"></a>
-								<div class="alignC">
-									<img src="https://t4.chei.com.cn/chsi/images/yzbg/2022/xlbg_sample_s.jpg" alt="报告样本"
-										width="80" /><br />
-									<a id="go_bindGA_print" href="javascript:;" title="打印报告"
-										class="bindGA colorBlue">打印报告</a><br />
-									<!-- <a href="/report/xueli/survey.do?vcode=AEQ4WN8086SHSL9R"
-										onmousedown="bgTopClick('print_zysurvey','onlinereport','cn')" title="问卷调查"
-										target="_blank" class="dcwjA">调查</a> -->
-								</div>
+								style="padding-bottom: 13px; display: none;right: 29px;"><span class="newLayerArrow"
+									style="right: 88px"></span><a href="#" title="关闭" class="newLayerClose"></a>
+								<div class="alignC"><img
+										src="https://t4.chei.com.cn/chsi/images/yzbg/2022/xlbg_sample_s.jpg" alt="报告样本"
+										width="80" /><br /><a id="go_bindGA_print" href="javascript:;" title="打印报告"
+										class="bindGA colorBlue">打印报告</a><br /></div>
 							</div>
 							<div id="bgxz" class="newLayer bgxz_newLayer" style="padding-bottom: 13px; display: none">
-								<span class="newLayerArrow" style="right: 77px"></span>
-								<a href="#" title="关闭" class="newLayerClose"></a>
-								<div class="alignC">
-									<img src="https://t4.chei.com.cn/chsi/images/yzbg/2022/xlbg_sample_s.jpg" alt="报告样本"
-										width="80" /><br />
-									<a id="go_bindGA_download"
-										href="http://shentandemao.gitee.io/pc/pdf/edited_ANWPB5TH0RUCCD6L.pdf"
-										title="打印报告" class="bindGA colorBlue">下载报告</a><br />
-									<!-- <a href="/report/xueli/survey.do?vcode=AEQ4WN8086SHSL9R"
-										onmousedown="bgTopClick('download_zysurvey','onlinereport','cn')" title="问卷调查"
-										target="_blank" class="dcwjA">调查</a> -->
-								</div>
+								<span class="newLayerArrow" style="right: 77px"></span><a href="#" title="关闭"
+									class="newLayerClose"></a>
+								<div class="alignC"><img
+										src="https://t4.chei.com.cn/chsi/images/yzbg/2022/xlbg_sample_s.jpg" alt="报告样本"
+										width="80" /><br /><a id="go_bindGA_download"
+										href="http://hou020417.github.io/pc/pdf/AVYK85TP6R8P5Z3A.pdf"
+										title="打印报告" class="bindGA colorBlue">下载报告</a><br /></div>
 							</div>
-							<div id="emailBox" class="newLayer" style="display: none">
-								<span class="newLayerArrow" style="right: 37px"></span>
-								<a href="#" title="关闭" class="newLayerClose"></a>
+							<div id="emailBox" class="newLayer" style="display: none"><span class="newLayerArrow"
+									style="right: 37px"></span><a href="#" title="关闭" class="newLayerClose"></a>
 								<table border="0" cellpadding="0" cellspacing="6">
 									<tbody>
 										<tr>
 											<td align="left" colspan="2">发送报告到指定邮箱：</td>
 										</tr>
 										<tr>
-											<td>
-												<input type="text" name="toEmail" id="toEmail" value=""
-													class="input_text input_t_l" />
-											</td>
-											<td>
-												<input type="button" value="发送"
+											<td><input type="text" name="toEmail" id="toEmail" value=""
+													class="input_text input_t_l" /></td>
+											<td><input type="button" value="发送"
 													onclick="bgTopClick('email','onlinereport','cn')" id="emailButton"
-													class="btn_blue" />
-											</td>
+													class="btn_blue" /></td>
 										</tr>
 										<tr>
-											<td align="left" colspan="2">
-												<span id="emailMsg">&nbsp;</span>
-											</td>
+											<td align="left" colspan="2"><span id="emailMsg">&nbsp;</span></td>
 										</tr>
 									</tbody>
 								</table>
 							</div>
-							<div id="xxewm" title="学信二维码" class="newLayer" style="display: none">
-								<span class="newLayerArrow" style="right: 5px"></span>
-								<a href="#" title="关闭" class="newLayerClose"></a>
-								<div class="alignC">
-									<img src="https://www.chsi.com.cn/report/img/749166e45e918135533c965721252f7297d9366425.jpg"
-										alt="学信二维码" /><br />
-									<a target="_blank" onmousedown="bgTopClick('download_barcode','onlinereport','cn')"
+							<div id="xxewm" title="学信二维码" class="newLayer" style="display: none"><span
+									class="newLayerArrow" style="right: 5px"></span><a href="#" title="关闭"
+									class="newLayerClose"></a>
+								<div class="alignC"><img
+										src="https://www.chsi.com.cn/report/img/749166e45e918135533c965721252f7297d9366425.jpg"
+										alt="学信二维码" /><br /><a target="_blank"
+										onmousedown="bgTopClick('download_barcode','onlinereport','cn')"
 										href="/xlcx/downloadxxewm.do?id=49166459183553365721227297936642&amp;ln=CN"
-										class="bindGA colorBlue">下载</a>
-								</div>
+										class="bindGA colorBlue">下载</a></div>
 							</div>
 						</div>
 						<div id="resultTable">
 							<div id="ssss" class="zxyz-res xl-zxyz-res">
 								<h4>教育部学历证书电子注册备案表</h4>
-								<div class="update-time">更新日期：2023年07月02日</div>
+								<div class="update-time">更新日期：2024年09月28日</div>
 								<div class="report-info">
-									<div class="r-zp-wrap">
-										<img src="../img/ANWPB5TH0RUCCD6L.jpg"
-											alt="" class="report-info-zp" />
-									</div>
+									<div class="r-zp-wrap"><img src="../img/ANWPB5TH0RUCCD6L.jpg" alt=""
+											class="report-info-zp" /></div>
 									<div class="report-info-item">
 										<div class="label">姓名</div>
 										<div class="value">袁永森</div>
@@ -404,23 +392,18 @@
 								</div>
 								<div class="zxyz-res-bottom">
 									<div class="zxyz-res-code">
-										<div class="left">
-											<img src="../img/ANWPB5TH0RUCCD6L.png" width="90" class="bg_ewm" />
-										</div>
+										<div class="left"><img src="../img/AVYK85TP6R8P5Z3A.png" width="90"
+												class="bg_ewm" /></div>
 										<div class="right">
-											<div class="r_top">
-												<span class="text">在线验证码</span>
-												<!-- <span class="yzm"><a>ATAdAaS7k310OB3I</a></span> -->
-												<span class="yzm">ANWPB5TH0RUCCD6L</span>
-											</div>
-											<span
-												class="xh">①</span>验证报告在线查验网址：https://www.chsi.com.cn/xlcx/bgcx.jsp<br />
-											<span class="xh">②</span>使用学信网App扫描二维码验证
+											<div class="r_top"><span class="text">在线验证码</span><span
+													class="yzm">AVYK85TP6R8P5Z3A</span></div><span
+												class="xh">①</span>验证报告在线查验网址：https://www.chsi.com.cn/xlcx/bgcx.jsp<br /><span
+												class="xh">②</span>使用学信网App扫描二维码验证
 										</div>
 									</div>
 									<div class="zxyz-res-tip">
 										<h3 class="zxyz-res-tip-title">注意事项：</h3>
-										<div class="zxyz-res-tip-content" style="line-height: 24px;">
+										<div class="zxyz-res-tip-content">
 											1、备案表是依据《高等学校学生学籍学历电子注册办法》（<a
 												href="https://www.chsi.com.cn/jyzx/201408/20140829/1245955796.html"
 												target="_blank"
@@ -431,9 +414,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="zxyz-res-bot">
-									<img src="../img/logo.png" height="32" />
-								</div>
+								<div class="zxyz-res-bot"><img src="../img/logo.png" height="32" /></div>
 							</div>
 						</div>
 					</div>
@@ -445,7 +426,6 @@
 				<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
 				<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 				<script src='../js/pdf.js'></script>
-				<!-- <div id="share"></div> -->
 				<script>
 					var s = new SnsShare("share");
 					s.show();
@@ -729,18 +709,15 @@
 				}
 			</style>
 			<div class="foot-wrap" id="footer">
-				<div class="footer-nav">
-					<a href="https://chesicc.chsi.com.cn/zxgw/zxjs/201604/20160418/1529506207.html"
-						target="_blank">中心简介</a>
-					<a href="https://www.chsi.com.cn/about/about_site.shtml" target="_blank">网站简介</a>
-					<a href="https://www.chsi.com.cn/about/copyright.shtml" target="_blank">版权声明</a>
-					<a href="https://www.chsi.com.cn/ad/index.shtml" target="_blank">网站宣传</a>
-					<a href="https://www.chsi.com.cn/about/contact.shtml" target="_blank">联系我们</a>
-					<a href="https://www.chsi.com.cn/zhaopin/index.jsp" target="_blank">招聘信息</a>
-					<a href="https://www.chsi.com.cn/help" target="_blank">帮助中心</a>
-					<a href="https://www.chsi.com.cn/z/tenyears/index.jsp" target="_blank">学信十周年</a>
-					<a href="https://www.chsi.com.cn/about/ct16.shtml" target="_blank">大事记</a>
-				</div>
+				<div class="footer-nav"><a href="https://chesicc.chsi.com.cn/zxgw/zxjs/201604/20160418/1529506207.html"
+						target="_blank">中心简介</a><a href="https://www.chsi.com.cn/about/about_site.shtml"
+						target="_blank">网站简介</a><a href="https://www.chsi.com.cn/about/copyright.shtml"
+						target="_blank">版权声明</a><a href="https://www.chsi.com.cn/ad/index.shtml"
+						target="_blank">网站宣传</a><a href="https://www.chsi.com.cn/about/contact.shtml"
+						target="_blank">联系我们</a><a href="https://www.chsi.com.cn/zhaopin/index.jsp"
+						target="_blank">招聘信息</a><a href="https://www.chsi.com.cn/help" target="_blank">帮助中心</a><a
+						href="https://www.chsi.com.cn/z/tenyears/index.jsp" target="_blank">学信十周年</a><a
+						href="https://www.chsi.com.cn/about/ct16.shtml" target="_blank">大事记</a></div>
 				<div class="footer width1180 clearfix">
 					<div class="footer-list border-r" id="footerListFirst">
 						客服热线：010-67410388<br />
@@ -751,18 +728,14 @@
 						Copyright © 2003-2023 <a href="https://www.chsi.com.cn/" target="_blank">学信网</a> All Rights
 						Reserved
 					</div>
-					<div class="footer-list">
-						<a href="https://beian.miit.gov.cn" target="_blank">京ICP备19004913号-1</a><br />
-						<a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010202009747"
+					<div class="footer-list"><a href="https://beian.miit.gov.cn"
+							target="_blank">京ICP备19004913号-1</a><br /><a
+							href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010202009747"
 							target="_blank"><img src='https://t3.chei.com.cn/chsi/images/jgwab.png' />
-							京公网安备11010202009747号</a>
-					</div>
+							京公网安备11010202009747号</a></div>
 				</div>
 			</div>
 		</div>
-
-
-
 		<script src="../js/vue.min.js"></script>
 		<script src='../js/iview.min.js'></script>
 		<script src='../js/gototop2.0.js'></script>
@@ -771,8 +744,6 @@
 		<script src='../js/least-ie11.min.js'></script>
 		<script src="../js/vendors.js"></script>
 		<script src="../js/app.js"></script>
-		<!-- <div id="share"></div> -->
-
 		<script>
 			var chsiApp = new Vue({
 				el: '#app',
