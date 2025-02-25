@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html data-dpr="1" style="font-size: 39.04px;">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no,viewport-fit=cover">
+		<title>学信档案</title>
+		<link rel="icon" href="https://t1.chei.com.cn/archive/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="../../css/appshouji.css">
+		<style>
+			.extra-wrap {
+				display: flex;
+				align-items: center;
+			}
+
+			.extra-wrap .red {
+				margin-right: 5px;
+				color: #e85759;
+			}
+
+			.vote-order-ul li {
+				align-items: center;
+			}
+
+			.vote-order-ul .vue-checkbox {
+				display: inline-block;
+				margin-right: 10px;
+				white-space: nowrap;
+				position: relative;
+				line-height: 1;
+				vertical-align: middle;
+				cursor: pointer;
+				outline: 0;
+			}
+
+			.vote-order-ul .vue-checkbox .vue-checkbox-inner {
+				display: inline-block;
+				position: relative;
+				width: .426rem;
+				height: .426rem;
+				top: 0;
+				left: 0;
+				background-color: #fff;
+				border: 1px solid #969799;
+				border-radius: 2px;
+				transition: all .2s ease-in-out;
+			}
+
+			.vote-order-ul .vue-checkbox .checked-box-order {
+				display: inline-block;
+				position: relative;
+				width: .426rem;
+				height: .426rem;
+				top: 0;
+				left: 0;
+				color: #fff;
+				border-radius: 2px;
+				text-align: center;
+				background-color: #25b887;
+				border: 1px solid #25b887;
+				transition: all .2s ease-in-out;
+			}
+
+			.jy-vote .sub_sub_title {
+				font-size: .373rem;
+				margin-top: 0.45rem;
+				font-weight: 700;
+			}
+
+			.checkbox-trans-list-item {
+				transition: all 1s;
+				display: inline-block;
+				margin-right: 10px;
+			}
+
+			.checkbox-trans-list-enter,
+			.checkbox-trans-list-leave-to {
+				opacity: 0;
+				transform: translateY(30px);
+			}
+
+			.checkbox-trans-list-leave-active {
+				position: absolute;
+			}
+			.context{
+				margin: 3px 1px;
+				/* display: flex;
+				justify-content: space-between; */
+			}
+			.contextTop{
+				display: flex;
+				justify-content: space-between;
+			}
+			.topLeft{
+				font-size: 19px;
+				line-height: 1;
+			}
+			.topRight{
+				background: rgba(43, 119, 199, 1);
+				border-radius: 10px;
+				padding: 1px 9px;
+				font-size: 12px;
+			}
+			.contextBottom{
+				font-size: 13.5px;
+				text-align: left;
+				margin-top: 12px;
+			}
+			.xuexin{
+				display: flex;
+				font-size: 14px;
+				margin-bottom: 14px;
+			}
+			.xuexin_left{
+				text-align: right;
+				color: #889098;
+				width: 32%;
+				font-family: 'ziti';
+			}
+			@font-face {
+				font-family: 'ziti';
+				src: url('../../css/ChillDuanSans_Regular.otf');
+			}	
+			.xuexin_right{
+				text-align: left;
+				margin-left: 14px;
+				font-family: 'ziti';
+				color: #000000;
+			}
+			.xj-c{
+				background: url(../../img/shuiyinxs.png) center center no-repeat;
+				width: 100%;
+				height: 100%;
+				background-size: cover;
+			}
+		</style>
+
+		
+		<script>
+			// 放在ga.jsp 中
+			
+		</script>
+		
+	</head>
+	<body style="font-size: 12px;">
+		<div id="app" class="my-container"><img src="https://t1.chei.com.cn/common/wap/images/share_xxda.jpg" width="0"
+				height="0" style="position: absolute; top: -100px; left: 0px;">
+			<div class="white-header van-nav-bar van-hairline--bottom" style="z-index: 1;">
+				<div class="van-nav-bar__left" onclick="back()"><i class="van-icon van-icon-arrow-left van-nav-bar__arrow">
+						<!---->
+						<!---->
+					</i>
+					<!---->
+				</div>
+				<div class="van-ellipsis van-nav-bar__title">高等学历</div>
+				<div class="van-nav-bar__right">
+					<!---->
+				</div>
+			</div>
+			<div class="padding16 xj-index">
+				<div class="top-card xl-top-card">
+					<div class="van-row">
+						<div class="van-col van-col--5">
+							<div class="img-div"><img
+									src="../../img/AEQMFGK19D2VM5DU.jpg"></div>
+						</div>
+						<div class="van-col van-col--19">
+							<h5 class="namtFamily">汤惠悦</h5>
+							<p>女　1994年10月24日</p>
+						</div>
+					</div>
+					<div class="top-bottom-img">
+						<div class="context">
+							<div class="contextTop">
+								<div class="topLeft">南京财经大学</div>
+								<div class="topRight">本科</div>
+							</div>
+							<div class="contextBottom">
+								<div>工商管理　|　函授</div>
+							</div>
+						</div>
+					</div>
+					<!---->
+				</div>
+				<div class="xj-c" style="margin-top: 32px;margin-bottom: 30px;">
+					<div class="xuexin">
+						<div class="xuexin_left">入学日期</div>
+						<div class="xuexin_right">2018年03月01日</div>
+					</div>
+					<div class="xuexin">
+						<div class="xuexin_left">毕（&nbsp;结&nbsp;）业日期</div>
+						<div class="xuexin_right">2020年07月01日</div>
+					</div>
+					<div class="xuexin">
+						<div class="xuexin_left">学历类别</div>
+						<div class="xuexin_right">成人高等教育</div>
+					</div>
+					<div class="xuexin">
+						<div class="xuexin_left">学制</div>
+						<div class="xuexin_right">2.5 年</div>
+					</div>
+					<div class="xuexin">
+						<div class="xuexin_left">毕（&nbsp;结&nbsp;）业</div>
+						<div class="xuexin_right">毕业</div>
+					</div>
+					<div class="xuexin">
+						<div class="xuexin_left">校（&nbsp;院&nbsp;）长姓名</div>
+						<div class="xuexin_right">程永波</div>
+					</div>
+					<div class="xuexin">
+						<div class="xuexin_left">证书编号</div>
+						<div class="xuexin_right">1032 7120 2006 0012 61</div>
+					</div>
+					
+				</div>
+				<div class="van-row">
+					<div class="van-col van-col--24"><a href="./showActionthy.html"
+							onmousedown="zhugeFun.gdjyToZxyz('学历','wap');"><button
+								class="my-btn van-button van-button--primary van-button--normal"><span
+									class="van-button__text">申请验证报告</span></button></a></div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			function back(){
+				 window.history.back();
+			}
+			//解决手机浏览器自带返回 没刷新问题
+			(function() {
+				var isPageHide = false;
+				window.addEventListener('pageshow', function() {
+					if (isPageHide) {
+						var curUrl = window.location.href,
+							curIndex = curUrl.substring(curUrl.indexOf('wap/') + 4);
+						if (curIndex == 'my.jsp') {
+							myVue.$data.activeBottom = 4;
+						} else {
+							myVue.$data.activeBottom = 0;
+						}
+					}
+				});
+				window.addEventListener('pagehide', function() {
+					isPageHide = true;
+				});
+			})();
+		</script>
+
+	</body>
+</html>
