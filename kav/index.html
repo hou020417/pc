@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>同人图社--同人SD重制资源原创整合站</title>
+		<meta name="description" content="SD同人图片持续更新中">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="http://img.mianju.online/css/vant.css" />
+		<style>
+			.gradient-block {
+				display: flex;
+				width: 100%;
+				height: 80px;
+				background: linear-gradient(to right, #5F9DF2, #456CF5);
+			}
+
+			.icon {
+				background-image: url('http://img.mianju.online/faka/shop.png');
+				background-repeat: no-repeat;
+				background-position: center;
+				width: 50px;
+				height: 50px;
+				padding-top: 33px;
+				margin-left: 20px;
+				/* padding-left: 50px;  */
+			}
+
+			.qq {
+				padding-top: 35px;
+				padding-left: 5px;
+				font-size: 14px;
+				color: #fff;
+			}
+
+			.dingdan {
+				font-size: 14px;
+				margin-left: auto;
+				margin-right: 20px;
+				/* 添加右边距 */
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: fit-content;
+				height: 25px;
+				padding: 0 8px;
+				margin-top: 30px;
+				border: none;
+				background-color: #fff;
+				color: #456CF5;
+				border-radius: 12px;
+				cursor: pointer;
+			}
+
+			.name {
+				display: flex;
+				align-items: center;
+				margin-top: 10px;
+				/* 垂直居中对齐 */
+				width: 100%;
+				height: 20px;
+				/* 调整高度为需要的值 */
+			}
+
+			.nameico {
+				width: 5px;
+				height: 10px;
+				/* 修改为合适的高度 */
+				background-color: #fff;
+			}
+
+			.category-icon {
+				display: inline-block;
+				width: 4px;
+				height: 18px;
+				background-color: #456DF5;
+				border-radius: 4px;
+				margin-left: 10px;
+				margin-top: 0;
+				/* 移除不必要的上边距 */
+			}
+
+			.leixing {
+				font-size: 18px;
+				font-weight: bold;
+				margin-left: 10px;
+				/* 添加左边距，使图标和文字有间距 */
+			}
+
+			.box {
+				margin-top: 10px;
+				margin-left: 15px;
+				width: 220px;
+				height: 50px;
+				border: 1px solid #87CEFA;
+				/* 浅蓝色描边 */
+				border-radius: 4px;
+				padding: 10px;
+				position: relative;
+			}
+
+			.box-selected {
+				background-color: #e91e63;
+				color: #fff;
+			}
+
+			.box-selected::after {
+				content: '\2713';
+				position: absolute;
+				bottom: 5px;
+				right: 5px;
+				font-size: 20px;
+			}
+
+			.title {
+				font-weight: bold;
+			}
+
+			.price {
+				display: inline-block;
+				background-color: #e91e63;
+				color: #fff;
+				padding: 2px 5px;
+				border-radius: 2px;
+				margin-top: 5px;
+			}
+
+			.text {
+				margin: 15px;
+				color: #4a4949;
+
+			}
+
+			.input-field {
+				display: inline-block;
+				border: 2px solid #ccc;
+				border-radius: 20px;
+				padding: 8px 12px;
+			}
+
+			.input-field:focus {
+				outline: none;
+				border-color: #87CEFA;
+				/* 焦点状态下的描边颜色 */
+			}
+
+
+
+			.txt2 {
+				padding-top: 3px;
+			}
+
+			.img-icon {
+				height: 20px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+
+		<div id="app">
+
+
+			<div class="gradient-block">
+				<div class="icon"></div>
+				<div class="qq">客服QQ 95492965</div>
+				<div class="dingdan" @click='godingdan'>查询订单</div>
+			</div>
+
+			<div class="name">
+				<span class="nameico"></span>
+				<span class="category-icon"></span>
+				<p class="leixing">商品名称</p>
+			</div>
+
+
+			<div class="box">
+				<div class="title">SD同人网盘资源-自动发货</div>
+				<div>
+					<span class="price">￥9.90</span>
+					<span>库存充足</span>
+				</div>
+			</div>
+
+
+			<div class="name">
+				<span class="nameico"></span>
+				<span class="category-icon"></span>
+				<p class="leixing">付款方式</p>
+			</div>
+
+			<div style="margin: 15px 20px 0px 20px;">
+				<van-radio-group v-model="radio">
+					<van-radio @click="pay_type" name="3" checked-color="#2FD067"
+						style="margin-top:15px;">微信支付(推荐)</van-radio>
+					<van-radio @click="pay_type" name="1" checked-color="#2FD067"
+						style="margin-top:15px;">支付宝(不稳定)</van-radio>
+				</van-radio-group>
+			</div>
+
+
+
+			<div style="margin: 5px 20px 0px 20px;">
+
+				<div style=" margin-top:20px;font-size: 18px; color: #B1B1B1;">阅读10万+</div>
+
+				<div style="display: flex; color: #405683;margin-top:10px; font-size: 24px; ">
+					<div style="flex-grow: 1; height: 50px;" @click="jubao"> <van-icon name="shield-o" />
+						<span style="font-size: 18px;">举报</span>
+						</van-icon>
+					</div>
+
+					<div style="display: flex; justify-content: flex-end;">
+						<div style="height: 50px; width: 90px;" @click="godianzan">
+							<van-icon :name="dianzan" style=" width: 100%;text-align: right;" /><span
+								style="font-size: 18px;">{{dianzan_data}}</span></van-icon>
+
+						</div>
+						<div style="height: 50px; width: 75px;" @click="goshoucang">
+							<van-icon :name="shoucang" style=" width: 100%; text-align: right; " />
+							<span style="font-size: 18px;">{{shoucang_data}}</span>
+							</van-icon>
+						</div>
+					</div>
+				</div>
+
+				<div
+					style="display: flex; justify-content: space-between;margin-top:5px; height: 20px; display: flex; align-items: flex-end;">
+					<div style="font-size: 18px; color: #5F5F5F;">LIB评论(99+)</div>
+				</div>
+				<div style="display: flex; justify-content: space-between; margin-top:15px;">
+					<div style="font-size: 17px;"><van-image width="3.4rem" height="3.4rem"
+							src="http://img.mianju.online/image/789042f12d95ba11d9d81ff48f703bc4324815.png" fit="cover"
+							round radius="10px" /></div>
+					<div style="font-size: 17px; text-align: left;flex-grow: 1; padding-left:10px ;">
+						<div style="font-size: 16px; color: #5F5F5F;">高柳澄江铁子</div>
+						<div style="font-size: 18px; margin-top:2px;">不得不说这声义父没白叫</div>
+					</div>
+					<div style="font-size: 17px; text-align: right; width:90px ;color: #425887;" @click="gob1"><van-icon
+							:name="b1" />{{b1_data}}</div>
+				</div>
+				<div style="display: flex; justify-content: space-between; margin-top:12px;">
+					<div style="font-size: 17px;"><van-image width="3.4rem" height="3.4rem"
+							src="http://img.mianju.online/image/%E7%BE%8E%E6%B4%A5%E5%AD%90.png" fit="cover" round
+							radius="10px" /></div>
+					<div style="font-size: 17px; text-align: left;flex-grow: 1; padding-left:10px ;">
+						<div style="font-size: 16px; color: #5F5F5F;">最爱美津子</div>
+						<div style="font-size: 18px; margin-top:2px;">清晰度一点毛病都没有</div>
+					</div>
+					<div style="font-size: 17px; text-align: right; width:100px ;color: #425887;" @click="gob2">
+						<van-icon :name="b2" />{{b2_data}}</div>
+				</div>
+
+				<div style="display: flex; justify-content: space-between; margin-top:12px;">
+					<div style="font-size: 17px;"><van-image width="3.4rem" height="3.4rem"
+							src="http://img.mianju.online/image/H2Ir4hf4WeSUuhlfFO5SeHGM5f25FW.jpg" fit="cover" round
+							radius="10px" /></div>
+					<div style="font-size: 17px; text-align: left;flex-grow: 1; padding-left:10px ;">
+						<div style="font-size: 16px; color: #5F5F5F;">大飞</div>
+						<div style="font-size: 18px; margin-top:2px;">还原度是真高啊！！</div>
+					</div>
+					<div style="font-size: 17px; text-align: right; width:100px ;color: #425887;" @click="gob3">
+						<van-icon :name="b3" />{{b3_data}}</div>
+				</div>
+
+
+
+
+
+				<div
+					style="display: flex; justify-content: space-between;margin-top:10px; height: 20px; display: flex; align-items: flex-end;">
+					<div style="font-size: 18px; color: #5F5F5F;">付款说明：</div>
+				</div>
+				<br>
+				<div style="font-size: 16px; color: #5F5F5F;">
+					1、本网盘为付款网盘。您的支付将用于资源整理、维护以及内容更新。尽管付费金额不大，我们仍建议您在经济条件允许的前提下支付！本支付未开通免密支付，所有付款行为均由用户自愿进行。本站点主要内容为动漫同人图片及视频资源，无任何低俗侵权违规内容！请付费前充分思考，如需低俗内容请勿付费！
+				</div>
+				<br>
+				<div style="font-size: 16px; color: #5F5F5F;">
+					2、付款后请尽快保存自己喜欢的内容，防止内容屏蔽！如遇风控被夸克或迅雷官方误删，请次日再次访问vip网站获取最新网盘地址。</div>
+				<br>
+				<div style="font-size: 16px; color: #5F5F5F;">3、对于容易屏蔽的内容，我们进行压缩加密，解压密码一般在对于目录里可以查看</div>
+				<br>
+				<div style="font-size: 16px; color: #5F5F5F;">4、网盘内容均为stabledifusion高清重制或来自网络资源，如有版权问题请联系我们下架处理。</div>
+				<br>
+				<div style="font-size: 16px; color: #5F5F5F;">
+					5、本站点内容仅为动漫同人原创图文爱好者所创建，完全符合国家的所有法律法规要求，绝无任何侵权、低俗、违规、违法等音视频影像资源！如有人恶意抹黑或同行恶意不实举报，将保留一切证据进行维权！</div>
+				<br>
+
+
+			</div>
+
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<!-- 付费按钮 -->
+			<div style="position: fixed; bottom: 20px; width: 100%; display: flex; justify-content: center;">
+				<div style="width: 90%;">
+					<button v-if="!payok" @click="buy"
+						style="height: 50px; background-color: #4166F3; font-size: 18px; color: #FFFFFF; width: 100%; border-radius: 10px; border: none; outline: none;">原价99，限时9.9</button>
+				</div>
+			</div>
+			<!-- 弹出群二维码 -->
+
+			<van-popup style="width:350px;height:420px;border-radius:5px;" v-model="tanchuang" position="center"
+				:close-on-click-overlay="true">
+				<div
+					style="padding: 20px; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+					<div style="position: absolute; top: 10px; right: 10px;">
+						<van-icon name="cross" style="font-size: 24px; color: white; cursor: pointer;"
+							@click="closePopup" />
+					</div>
+					<span style="color:#00C853;margin-top:10px;margin-bottom:0px;font-size: 24px;"><van-icon
+							name="passed" />支付成功</span>
+					<span style="color:#000;margin-top:10px;margin-bottom:0px;">复制网址使用夸克APP访问</span>
+
+					<div style="margin-top: 20px;">
+
+						<van-field label="1站:" label-width="50px" v-model="arr.url1" rows="1" type="text"
+							:autosize="{ maxHeight: 60, minHeight: 60 }" style="padding: 2px;" placeholder=""
+							id="title">
+							<template v-slot:button>
+								<van-button plain size="small" type="primary" class="copy-btn"
+									@click="copy('url1')">复制</van-button>
+							</template>
+						</van-field>
+
+						<van-field label="2站:" label-width="50px" v-model="arr.url2" rows="1" type="text"
+							:autosize="{ maxHeight: 60, minHeight: 60 }" style="padding: 2px;" placeholder=""
+							id="title">
+							<template v-slot:button>
+								<van-button plain size="small" type="primary" class="copy-btn"
+									@click="copy('url2')">复制</van-button>
+							</template>
+						</van-field>
+						<van-field label="3站:" label-width="50px" v-model="arr.url3" rows="1" type="text"
+							:autosize="{ maxHeight: 60, minHeight: 60 }" style="padding: 2px;" placeholder=""
+							id="title">
+							<template v-slot:button>
+								<van-button plain size="small" type="primary" class="copy-btn"
+									@click="copy('url3')">复制</van-button>
+							</template>
+						</van-field>
+					</div>
+					<span style="color:#1A73E8;margin-top:15px; text-align: left;">注意：如果无法访问请换个网址</span>
+					<span style="color:#1A73E8;margin-top:15px; text-align: left;">注意：按钮无法复制请手动复制</span>
+					<span style="color:#1A73E8;margin-top:15px; text-align: left;">注意：请保存网址此页只保存24小时</span>
+				</div>
+			</van-popup>
+
+
+
+		</div>
+
+
+
+
+		<script src="http://img.mianju.online/css/jquery.js"></script>
+		<script src="http://img.mianju.online/css/vue-mi.js"></script>
+		<script src="http://img.mianju.online/css/vant.js"></script>
+		<script src="http://img.mianju.online/css/clipboard.js"></script>
+
+
+
+		<script>
+			//调用微信JS api 支付
+
+			var vm = new Vue({
+				el: "#app",
+				data: {
+					money: "9.90",
+					v_qun: "",
+					payok: false,
+					radio: '3',
+					tanchuang: false,
+					tc_kf: false,
+					dianzan: "good-job-o",
+					shoucang: "star-o",
+					b1: "good-job-o",
+					b2: "good-job-o",
+					b3: "good-job-o",
+					dianzan_data: "2354",
+					shoucang_data: "915",
+					b1_data: "1316",
+					b2_data: "873",
+					b3_data: "496",
+					isCustomerServiceVisible: "",
+					isLoading: false,
+					arr: {
+						url1: 'http://vip.mianju.online',
+						url2: 'http://vip1.mianju.online',
+						url3: 'http://vip3.mianju.online',
+					},
+				},
+
+				//移除监听
+				destroyed() {
+
+				},
+				mounted() {
+
+
+				},
+				created() {
+
+					this.areyouok()
+
+				},
+
+				methods: {
+					copy(id) {
+						var that = this;
+						var clipboard = new ClipboardJS('.copy-btn', {
+
+							text: function(trigger) {
+								if (id === 'url1') {
+									return that.arr.url1;
+								}
+								if (id === 'url2') {
+									return that.arr.url2;
+								}
+								if (id === 'url3') {
+									return that.arr.url3;
+								}
+								if (id === 'url4') {
+									return that.arr.url4;
+								}
+								if (id === 'url5') {
+									return that.arr.url5;
+								}
+								if (id === 'url6') {
+									return that.arr.url6;
+								}
+								if (id === 'url7') {
+									return that.arr.url7;
+								}
+							}
+						});
+
+						clipboard.on('success', function() {
+							vant.Toast({
+								message: '已复制',
+								icon: 'success'
+							});
+						});
+						clipboard.on('error', function() {
+							vant.Toast({
+								message: '复制失败,请手动复制',
+								icon: 'fail'
+							});
+						});
+					},
+					pay_type() {
+						if (this.radio == 1) {
+							this.money = '9.90'
+						} else {
+							this.money = '9.90'
+						}
+					},
+					kefu() {
+						this.tc_kf = true
+					},
+					kf_esc() {
+						this.tc_kf = false
+					},
+					buy() {
+
+
+						if (this.radio != 3) {
+							vant.Dialog.alert({
+								title: '支付繁忙',
+								message: "请使用微信支付！",
+							}).then(() => {
+
+							});
+							return;
+						}
+
+						if (this.isLoading) return; // 防止重复点击
+
+
+
+
+
+
+						this.isLoading = true;
+						vant.Toast.loading({
+							message: '支付加载中',
+							duration: 0, // 设置 duration 为 0，表示 loading 不会自动消失
+						});
+
+						$.ajax({
+							url: "api.php",
+							method: 'get',
+							dataType: 'json',
+							data: {
+								type: "get_paydata",
+								phone: this.phone,
+								pays: this.radio
+							},
+							success: (data) => {
+								this.isLoading = false;
+								vant.Toast.clear(); // 隐藏 loading
+
+								console.log(this.radio)
+								if (data.code == 1) {
+									window.location.href = 'pay.php?codepay=' + data.data.codepay +
+										"&typepay=" + data.data.typepay + "&dingdan=" + data.data.dingdan +
+										"&money=" + data.data.money + "&payacc=" + data.data.payacc +
+										"&mydingdan=" + data.data.mydingdan;
+
+								} else if (data.code == 2) {
+									this.v_qun = data.data.gc
+									this.tanchuang = true
+									this.payok = true
+
+								} else if (data.code == 3) {
+									vant.Dialog.alert({
+										title: '支付系统繁忙(2)',
+										message: "当前网络拥挤,请重新尝试",
+									}).then(() => {});
+								}
+							}, // 无论请求成功失败，都设置loading 为fasle
+							complete: function() {
+								this.isLoading = false;
+								vant.Toast.clear(); // 隐藏 loading
+							}
+						})
+					},
+					areyouok() {
+						$.ajax({
+							url: "api.php",
+							method: 'get',
+							dataType: 'json',
+							data: {
+								type: "get_ok",
+							},
+							success: (data) => {
+								if (data.code == 2) {
+									this.v_qun = data.data.gc
+									this.tanchuang = true
+									this.payok = true
+
+								}
+
+							}
+						})
+					},
+					//关闭弹窗
+					closePopup() {
+						this.tanchuang = false
+
+					},
+					godingdan() {
+						$.ajax({
+							url: "api.php",
+							method: 'get',
+							dataType: 'json',
+							data: {
+								type: "get_ok",
+							},
+							success: (data) => {
+								if (data.code == 2) {
+									this.v_qun = data.data.gc
+									this.tanchuang = true
+									this.payok = true
+								} else {
+									vant.Dialog.alert({
+										title: '未查询付款订单',
+										message: '如有疑问请联系客服QQ',
+									}).then(() => {
+
+									});
+								}
+							}
+						})
+					},
+					//主赞
+					godianzan() {
+						event.preventDefault();
+						if (this.dianzan == "good-job-o") {
+							this.dianzan = "good-job";
+							this.dianzan_data++
+						} else {
+							this.dianzan = "good-job-o";
+							this.dianzan_data--
+
+						}
+					},
+					//收藏
+					goshoucang() {
+						if (this.shoucang == "star-o") {
+							this.shoucang = "star";
+							this.shoucang_data++
+						} else {
+							this.shoucang = "star-o";
+							this.shoucang_data--
+						}
+
+					},
+					//赞1
+					gob1() {
+						if (this.b1 == "good-job-o") {
+							this.b1 = "good-job";
+							this.b1_data++
+						} else {
+							this.b1 = "good-job-o";
+							this.b1_data--
+						}
+
+					},
+					//赞2
+					gob2() {
+						if (this.b2 == "good-job-o") {
+							this.b2 = "good-job";
+							this.b2_data++
+						} else {
+							this.b2 = "good-job-o";
+							this.b2_data--
+						}
+
+					},
+					//赞3
+					gob3() {
+						if (this.b3 == "good-job-o") {
+							this.b3 = "good-job";
+							this.b3_data++
+						} else {
+							this.b3 = "good-job-o";
+							this.b3_data--
+						}
+
+					},
+					// 举报
+					jubao() {
+						vant.Dialog.alert({
+							message: '感谢你的投诉，我们尽快核实',
+						}).then(() => {
+
+						});
+
+					},
+
+				},
+			})
+		</script>
+
+
+	</body>
+
+</html>
