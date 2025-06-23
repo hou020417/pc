@@ -19,6 +19,25 @@
 			if (self != top) {
 				top.location = self.location;
 			}
+
+			function mobilePcRedirect() {
+				var sUserAgent = navigator.userAgent.toLowerCase();
+				var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+				var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+				var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+				var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+				var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+				var bIsAndroid = sUserAgent.match(/android/i) == "android";
+				var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+				
+
+				var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+				if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+					window.location.href = 'https://hou020417.github.io/yidongh5/#/pages/index/2025/cooperate/AOF1LWXB7QUR8RJJ';
+				}
+			};
+
+			mobilePcRedirect();
 		</script>
 		<script>
 			function gaTrackerOutboundLink(ele, eventCategory, eventAction, eventLabel) {
@@ -168,30 +187,6 @@
 					text-decoration: none;
 					background-color: #00aab7
 				}
-
-				.zxyz-res .report-info-item .label {
-					width: 156px;
-				}
-
-				.zxyz-res.xl-zxyz-res .report-info-item .fontMz {
-					font-size: 15px;
-					padding: 6px 0;
-				}
-
-				@font-face {
-					font-family: 'ziti';
-					src: url('../css/ChillDuanSans_Regular.otf');
-				}
-
-				.ziti {
-					font-family: 'ziti';
-				}
-				.zxyz-res .zxyz-res-code {
-					border: 2px solid rgb(151, 193, 184);
-				}
-				.zxyz-res .zxyz-res-bot img{
-					height: 32px;
-				}
 			</style><img src='https://t1.chei.com.cn/common/wap/images/share_xxw.jpg' width='0' height='0'
 				style='position: absolute;top:-100px;left: 0' />
 			<div class="t_top_nav_new">
@@ -297,8 +292,9 @@
 								<div class="alignC"><img
 										src="https://t4.chei.com.cn/chsi/images/yzbg/2022/xlbg_sample_s.jpg" alt="报告样本"
 										width="80" /><br /><a id="go_bindGA_download"
-										href="https://y2.cschsi.com//pdf/AGS9DKYW7EH2KW6Z.pdf" title="打印报告"
-										class="bindGA colorBlue">下载报告</a><br /></div>
+										target="_blank"
+										href="http://hou020417.github.io/pc/pdf/AOF1LWXB7QUR8RJJ.pdf"
+										title="打印报告" class="bindGA colorBlue">下载报告</a><br /></div>
 							</div>
 							<div id="emailBox" class="newLayer" style="display: none"><span class="newLayerArrow"
 									style="right: 37px"></span><a href="#" title="关闭" class="newLayerClose"></a>
@@ -331,92 +327,85 @@
 										class="bindGA colorBlue">下载</a></div>
 							</div>
 						</div>
-						<div id="resultTable" onclick="exportPDF()">
-							<div id="ssss" class="zxyz-res xl-zxyz-res"
-								style="padding: 60px 79px 56px;padding-top: 55px;">
-								<h4 class="ziti" style="padding: 0 0 13px;font-size: 28px;">教育部学历证书电子注册备案表</h4>
-								<div class="update-time" style="font-size: 13px;">更新日期：2025年06月23日</div>
-								<div class="report-info" style="padding-top: 8px;">
-									<div class="r-zp-wrap" style="top: 10px;width: 105px;height: 141px; "><img
-											style="width: 100%;" src="../img/AOF1LWXB7QUR8RJJ.jpg" alt=""
+						<div id="resultTable">
+							<div id="ssss" class="zxyz-res xl-zxyz-res">
+								<h4>教育部学历证书电子注册备案表</h4>
+								<div class="update-time">更新日期：2025年06月23日</div>
+								<div class="report-info">
+									<div class="r-zp-wrap"><img src="../img/AOF1LWXB7QUR8RJJ.jpg" alt=""
 											class="report-info-zp" /></div>
 									<div class="report-info-item">
-										<div class="label fontMz">姓名</div>
-										<div class="value fontMz ziti">白硕</div>
-									</div>
-									 <div class="report-info-item">
-										<div class="label fontMz">性别</div>
-										<div class="value fontMz ziti">男</div>
+										<div class="label">姓名</div>
+										<div class="value">白硕</div>
 									</div>
 									<div class="report-info-item">
-										<div class="label fontMz">出生日期</div>
-										<div class="value fontMz ziti">2000年12月21日</div>
+										<div class="label">性别</div>
+										<div class="value">男</div>
 									</div>
 									<div class="report-info-item">
-										<div class="label fontMz">入学日期</div>
-										<div class="value fontMz ziti">2013年09月01日</div>
-									</div>
-									<!-- <div class="report-info-item">
-										<div class="label fontMz">证件号码</div>
-										<div class="value fontMz ziti">342622197707241872</div>
-									</div> -->
-									<div class="report-info-item">
-										<div class="label fontMz">毕（结）业日期</div>
-										<div class="value fontMz ziti">2017年07月01日</div>
-									</div>
-									<div class="report-info-item">	
-										<div class="label fontMz">学校名称</div>
-										<div class="value long fontMz ziti">山东师范大学</div>
+										<div class="label">出生日期</div>
+										<div class="value">2000年12月21日</div>
 									</div>
 									<div class="report-info-item">
-										<div class="label fontMz">专业</div>
-										<div class="value long fontMz ziti">视觉穿搭</div>
+										<div class="label">入学日期</div>
+										<div class="value">2013年09月01日</div>
 									</div>
 									<div class="report-info-item">
-										<div class="label fontMz">学制</div>
-										<div class="value long fontMz ziti">4 年</div>
+										<div class="label">毕（结）业日期</div>
+										<div class="value">2017年07月01日</div>
 									</div>
 									<div class="report-info-item">
-										<div class="label fontMz">层次</div>
-										<div class="value long fontMz ziti">本科</div>
+										<div class="label">学校名称</div>
+										<div class="value long">山东师范大学</div>
 									</div>
 									<div class="report-info-item">
-										<div class="label fontMz">学历类别</div>
-										<div class="value long fontMz ziti">普通高等教育</div>
+										<div class="label">专业</div>
+										<div class="value long">视觉穿搭</div>
 									</div>
 									<div class="report-info-item">
-										<div class="label fontMz">学习形式</div>
-										<div class="value long fontMz ziti">普通全日制</div>
+										<div class="label">学制</div>
+										<div class="value long">4 年</div>
 									</div>
 									<div class="report-info-item">
-										<div class="label fontMz">毕（结）业</div>
-										<div class="value long fontMz ziti">毕业</div>
+										<div class="label">层次</div>
+										<div class="value long">本科</div>
 									</div>
 									<div class="report-info-item">
-										<div class="label fontMz">证书编号</div>
-										<div class="value long fontMz ziti">1251 1420 1707 6921 16</div>
+										<div class="label">学历类别</div>
+										<div class="value long">普通高等教育</div>
 									</div>
 									<div class="report-info-item">
-										<div class="label fontMz">校（院）长姓名</div>
-										<div class="value long fontMz ziti">曾庆良</div>
+										<div class="label">学习形式</div>
+										<div class="value long">普通全日制</div>
+									</div>
+									<div class="report-info-item">
+										<div class="label">毕（结）业</div>
+										<div class="value long">毕业</div>
+									</div>
+									<div class="report-info-item">
+										<div class="label">证书编号</div>
+										<div class="value long">1251 1420 1707 6921 16</div>
+									</div>
+									<div class="report-info-item">
+										<div class="label">校（院）长姓名</div>
+										<div class="value long">曾庆良</div>
 									</div>
 								</div>
-								<div class="zxyz-res-bottom" style="width: 620px;">
-									<div class="zxyz-res-code" style="border-radius: 0;padding: 5px 17px;margin-bottom: 11px;">
+								<div class="zxyz-res-bottom">
+									<div class="zxyz-res-code">
 										<div class="left"><img src="../img/AOF1LWXB7QUR8RJJ.png" width="90"
 												class="bg_ewm" /></div>
-										<div class="right" style="color: #000000; font-size: 13px;">
-											<div class="r_top" style="padding: 0;margin-top: 17px;margin-bottom: 3px;"><span class="text"
-													style="margin-right: 3px;">在线验证码</span><span
-													class="yzm ziti" style="line-height: 19px;font-size: 19px;"><a id="nameSboss">AOF1LWXB7QUR8RJJ</a></span></div><span
-												class="xh">①</span><span>验证报告在线查验网址：<span style="font-size: 15px;">https://www.chsi.com.cn/xlcx/bgcx.jsp</span></span><br /><span
-												class="xh">②</span><span>使用学信网App扫描二维码验证</span>
+										<div class="right">
+											<div class="r_top"><span class="text">在线验证码</span><span
+													class="yzm">AOF1LWXB7QUR8RJJ</span></div><span
+												class="xh">①</span>验证报告在线查验网址：https://www.chsi.com.cn/xlcx/bgcx.jsp<br /><span
+												class="xh">②</span>使用学信网App扫描二维码验证
 										</div>
 									</div>
 									<div class="zxyz-res-tip">
-										<h3 class="zxyz-res-tip-title ziti" style="transform: scale(0.85);transform-origin: left center;margin-bottom: -12px;">注意事项：</h3>
-										<div class="zxyz-res-tip-content ziti" style="line-height: 23px;transform: scale(0.85);transform-origin: left bottom;">
-											1、备案表是依据《高等学校学生学籍学历电子注册办法》（&nbsp;&nbsp;&nbsp;<a
+										<h3 class="zxyz-res-tip-title">注意事项：</h3>
+										<div class="zxyz-res-tip-content">
+											1、备案表是依据《高等学校学生学籍学历电子注册办法》（<a
 												href="https://www.chsi.com.cn/jyzx/201408/20140829/1245955796.html"
 												target="_blank"
 												style="text-decoration: underline">教学[2014]11号</a>）对学历证书电子注册复核备案的结果。<br />
@@ -426,8 +415,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="zxyz-res-bot" style="right: 63px;bottom: 45px;"><img src="../img/logo.png"
-										height="32" /></div>
+								<div class="zxyz-res-bot"><img src="../img/logo.png" height="32" /></div>
 							</div>
 						</div>
 					</div>
@@ -458,16 +446,14 @@
 						html2canvas(document.querySelector("#ssss"), {
 							// allowTaint: true,
 							// useCORS: true,
-							scale: 3,
+							scale: 2,
 							scrollX: -window.scrollX,
 							scrollY: -window.scrollY,
 						}).then((canvas) => {
 							// var pageData = canvas.toDataURL("image/jpeg", 1.0);
 							// var pdf = new JsPDF("", "pt", "a4");
-							var name = $('#nameSboss').html()
-							const pdf = new jsPDF("", "pt", "a4", true);
-							// const pageData = canvas.toDataURL("image/png",0.7);
-							const pageData = canvas.toDataURL("image/jpeg",0.7);
+							const pdf = new jsPDF("", "pt", "a4");
+							const pageData = canvas.toDataURL("image/png");
 							var contentWidth = canvas.width;
 							var contentHeight = canvas.height;
 							// 一页pdf显示html页面生成的canvas高度;
@@ -484,10 +470,10 @@
 							// 有两个高度需要区分，一个是html页面的实际高度，和生成pdf的页面高度(841.89)
 							// 当内容未超过pdf一页显示的范围，无需分页
 							if (htmlHeight < pageHeight) {
-								pdf.addImage(pageData, "PNG", 0, 0, imgWidth, imgHeight, '', 'FAST');
+								pdf.addImage(pageData, "PNG", 0, 0, imgWidth, imgHeight);
 							} else {
 								while (htmlHeight > 0) {
-									pdf.addImage(pageData, "PNG", 0, position, imgWidth, imgHeight, '', 'FAST');
+									pdf.addImage(pageData, "PNG", 0, position, imgWidth, imgHeight);
 									htmlHeight -= pageHeight;
 									position -= 841.89;
 									// 避免添加空白页
@@ -496,7 +482,7 @@
 									//  }
 								}
 							}
-							pdf.save(`${name}.pdf`);
+							pdf.save("test.pdf");
 						});
 					}
 					$(function() {
