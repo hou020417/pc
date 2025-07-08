@@ -1,0 +1,241 @@
+@charset "utf-8";
+/*-----------------公共layui样式--------------------*/
+html,body{height: 100%;background: #fff;}
+.fr {float: right}
+.gray-bg{background: #fafafa}
+.weadmin-body {padding: 10px 10px 0 10px;margin: 0!important;}
+.weadmin-body-1 {padding: 15px 10px 0;margin: 0!important; }
+body {background: #fff}
+.has-tree {background: #fafdff}
+.has-tree .layui-show {background: #fff;}
+.layui-input:hover,.layui-textarea:hover,.layui-input:focus,.layui-textarea:focus {border-color: #27b7b0}
+.layui-elem-quote {padding: 0 0 0 15px;line-height: 40px}
+.con-full .con-full-l {min-height: 100%;padding: 0;background: #fafdff}
+.con-full .con-full-r {min-height: 100%;background: #fff;}
+.con-full-l .layui-input-inline {width: 100%;margin: 10px 0}
+.con-full-l .layui-input-inline input {width: 90%;margin: auto;border: 1px solid #dae1e4;background: url(../assets/images/search.png) no-repeat right 10px center;}
+.con-full-l .layui-input-inline input:hover,.con-full-l .layui-input-inline input:focus{background: url(../assets/images/search-hover.png) no-repeat right 10px center;}
+.con-in {min-height: 100%}
+.layui-form-label {text-align: left;padding: 0 10px;line-height: 30px}
+.layui-input,.layui-select,.layui-textarea {height: 30px;line-height: 30px}
+.layui-btn {display: inline-block;height: 30px;line-height: 30px;padding: 0 16px;border-radius: 3px;color: #fff;white-space: nowrap;text-align: center;font-size: 14px;border: 0;cursor: pointer}
+/*.layui-btn:hover {opacity: .8;filter: alpha(opacity=80);color: #fff}*/
+.layui-btn:active {opacity: 1;filter: alpha(opacity=100)}
+.layui-table-cell .layui-btn {line-height: 20px!important;height: 20px!important;font-size: 12px}
+.layui-elem-quote .layui-btn {line-height: 36px;height: 36px}
+.layui-form-item .layui-input-inline {width: 220px}
+.model .layui-form .layui-form-item {width: auto;position: relative;margin-bottom: 32px}
+.layui-form-item .need {color: #e45856;position: absolute;right: 10px;top: 33%}
+.layui-form-select dl {top: 29px;padding: 0}
+.layui-form-select dl dd.layui-this {background-color: #27b7b0;color: #fff}
+.layui-form-selectup dl {bottom: initial}
+.btn-save {border: 1px solid #e5e5e5}
+
+
+.layui-elem-quote {margin-bottom: 5px}
+.layui-table,.layui-table-view {margin: 0}
+.layui-table-view .layui-table th {font-weight: 800;padding: 1px 0}
+.layui-none {border-bottom: solid 1px #e5e5e5;margin-bottom: 1px}
+.layui-form-item {margin-bottom: 10px}
+.layui-table-cell {height: 30px;line-height: 30px}
+.layui-table-view .layui-table td {padding: 0}
+.layui-table-view select[lay-ignore] {margin: 0 5px;height: 16px}
+::-webkit-scrollbar-track {border-radius: 10px;-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0)}
+::-webkit-scrollbar-thumb {background-color: #c1c1c1;border-radius: 10px;-webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1)}
+::-webkit-scrollbar {width: 16px;height: 16px}
+::-webkit-scrollbar-track,::-webkit-scrollbar-thumb {border-radius: 999px;border: 5px solid transparent}
+::-webkit-scrollbar-track {box-shadow: 1px 1px 5px rgba(0,0,0,.2) inset}
+::-webkit-scrollbar-thumb {min-height: 20px;background-clip: content-box;box-shadow: 0 0 0 5px rgba(0,0,0,.02) inset}
+::-webkit-scrollbar-corner {background: transparent}
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {color: #adbbba}
+input:-moz-placeholder,textarea:-moz-placeholder {color: #adbbba}
+input::-moz-placeholder,textarea::-moz-placeholder {color: #adbbba}
+input:-ms-input-placeholder,textarea:-ms-input-placeholder {color: #adbbba}
+.clearfix:after {content: "";display: block;clear: both}
+.clearfix {*zoom: 1}
+.btn-box {position: absolute;width: 100%;bottom: 0;z-index: 1;margin: 15px -10px 0;padding: 7px 0;border-top: 1px solid #e5e5e5;background: #fff;}
+.btn-box-1 {position: fixed;width: 100%;bottom: 0;background: #fff}
+.hasfix {padding-bottom: 55px}
+.form-star {background: #fbfbfb;margin: -15px -10px 13px;padding: 12px 10px ;}
+.layui-form-select{text-align: left}
+input:disabled{background: #f5f5f5;}
+input:disabled:hover{background: #f5f5f5;border: 1px solid #e5e5e5;}
+.layui-form-select dl{max-width: 220px}
+.pagination>li {display: inline-block!important;position: relative;top: 6px;}
+.fixed-table-footer, .fixed-table-header {overflow: hidden;background: #e7ebee;}
+.layui-nav.right{height: 50px}
+/*表格样式覆盖*/
+.layui-table tbody tr:hover,.layui-table thead tr,.layui-table-click,.layui-table-header,.layui-table-hover,.layui-table-mend,.layui-table-patch,.layui-table-tool,.layui-table[lay-even] tr:nth-child(even) {background-color: #f2f2f2}
+.layui-table td,.layui-table th,.layui-table-fixed-r,.layui-table-header,.layui-table-page,.layui-table-tips-main,.layui-table-tool,.layui-table-view,.layui-table[lay-skin=line],.layui-table[lay-skin=row] {border-width: 1px;border-style: solid;border-color: #e6e6e6}
+.layui-table thead tr{background: #e7ebee}
+.layui-table[lay-even] tr:nth-child(even){ background: #f1f4f6;  }
+.layui-table tbody tr:hover{background: #e6f6f5 }
+.layui-table-view .layui-form-checkbox[lay-skin=primary] i{width: 14px;height: 14px;border: 1px solid #d8e7e2;border-radius: 0;font-size: 12px;line-height: 12px;}
+.layui-table-view .layui-form-checked[lay-skin=primary] i ,.layui-table-view .layui-form-checkbox[lay-skin=primary]:hover i{border:1px solid #009588;background-color: #009588;color: #fff;  }
+.layui-elem-quote { line-height: 35px; background: #f1f5f9;}
+.layui-table-r td, .layui-table-r th {min-height: 35px;line-height: 35px;padding: 0 0 0 15px; }
+.layui-table-r td:first-child {background: #f1faf7}
+.layui-table-r td .layui-form-switch{margin-top: 0}
+.layui-layer-title { border-bottom: 1px solid #e5e5e5;background-color: #fff;  }
+.layui-table-view{border: 0}
+.layui-table-box{border: 1px solid #e5e5e5;}
+.layui-table-view .layui-table td, .layui-table-view .layui-table th{padding: 0}
+
+.layui-table-page {position: relative;width: 100%;padding:10px 0; height: 48px; border: 0;font-size: 12px}
+.layui-table-page>div {height: 26px;text-align: center}
+.layui-table-page .layui-laypage {margin: 0}
+.layui-table-page .layui-laypage a,.layui-table-page .layui-laypage span {height: 26px;line-height: 26px;margin-bottom: 10px;border: 0;background: 0}
+.layui-table-page .layui-laypage a,.layui-table-page .layui-laypage span.layui-laypage-curr {padding: 0 12px}
+.layui-table-page .layui-laypage span {margin-left: 0;padding: 0}
+.layui-table-page .layui-laypage .layui-laypage-prev {margin-left: -7px!important}
+.layui-table-page .layui-laypage .layui-laypage-curr .layui-laypage-em {left: 0;top: 0;padding: 0}
+.layui-table-page .layui-laypage button,.layui-table-page .layui-laypage input {height: 26px;line-height: 26px}
+.layui-table-page .layui-laypage input {width: 40px}
+.layui-table-page .layui-laypage button {padding: 0 10px}
+.layui-table-page select {height: 18px}
+/*覆盖面包屑样式*/
+.breadcrumb {  visibility: initial;  font-size: 12px;  padding-left: 20px;line-height: 40px;border-bottom: 1px solid #e5e5e5;background: #fff}
+.breadcrumb a{margin: 0 10px}
+.breadcrumb a cite{color: #34aba0}
+
+/*覆盖弹出窗样式*/
+.layui-layer .layui-layer-title{color: #2a3343;height: 44px;line-height: 44px;font-size: 14px;background:#eaeff0 }
+.layui-layer-setwin{right: 16px;top: 17px;}
+.inLayer .layui-btn, .inLayer .layui-input, .inLayer .layui-select, .inLayer .layui-textarea{height: 34px;line-height: 34px}
+.inLayer .layui-form-label{line-height: 34px}
+.layerBtnCenter{margin-top: 20px;text-align: center;}
+.layui-form-item .layui-input-inline{position: relative}
+.layui-form-select dl dd, .layui-form-select dl dt{line-height: 30px}
+#nav>li.active{background: #f1f5f9}
+.layui-tab-more .layui-tab-bar .layui-icon{top:1px}
+.layui-layer-iframe .layui-layer-btn, .layui-layer-page .layui-layer-btn ,.layui-layer-btn{padding-top: 10px;text-align: center!important;border-top: 1px solid #e5e5e5;}
+/*
+ * 不同类别树列表样式调整
+ */
+.pims-tree{height: 100%;border-right: 1px solid #e2ebed}
+.jsTree>ul{margin: 10px 10px 0}
+.jstree-default .jstree-anchor,.jstree-default .jstree-icon:empty{ line-height: 30px;  height: 30px;  }
+
+.jstree-default .jstree-clicked,.jstree-default .jstree-hovered{color: #27b7b0;border: 0;box-shadow:none;background: transparent}
+.jstree-default .jstree-checkbox{}
+/*加减号收缩*/
+.jstree-default .jstree-closed>.jstree-ocl{background: url(../assets/img/treeContext/root-2.png) no-repeat 7px center}
+.jstree-default  .jstree-open>.jstree-ocl{background: url(../assets/img/treeContext/root-1.png) no-repeat 7px center}
+.jstree-children li:first-child.jstree-closed>.jstree-ocl{background: url(../assets/img/treeContext/root-2.png) no-repeat 7px center}
+.jstree-children li:first-child.jstree-open>.jstree-ocl{background: url(../assets/img/treeContext/root-1.png) no-repeat 7px center}
+.jstree-children li:last-child.jstree-closed>.jstree-ocl{background: url(../assets/img/treeContext/last-2.png)  no-repeat left 7px top }
+.jstree-children li:last-child.jstree-open>.jstree-ocl{background: url(../assets/img/treeContext/last-1.png)  no-repeat left 8px top }
+.jsTree>ul.jstree-container-ul>li.jstree-open>.jstree-ocl{background: url(../assets/img/treeContext/root-1.png) no-repeat 7px center}
+.jsTree>ul.jstree-container-ul>li.jstree-closed>.jstree-ocl{background: url(../assets/img/treeContext/root-2.png)  no-repeat left 7px center }
+
+/*----------覆盖树悬浮框样式-----------*/
+.vakata-context, .vakata-context ul{background: #fff;border:1px solid #dce0e4;box-shadow: 0 0 0 0;padding: 0}
+.vakata-context li>a .vakata-contextmenu-sep{border-left: 0;width: 0}
+.vakata-context li>a{color: #747a83;font-size: 12px;}
+.vakata-context li>a:hover,.vakata-context .vakata-context-hover>a{box-shadow: 0 0 0 0;background: #ecf0f4}
+/*定时任务*暂停*修改*恢复*删除*/
+.layui-table-cell .layui-btn{border: 1px solid #e5e5e5;color: #424758;background: transparent}
+.layui-table-cell .layui-btn-warm:hover{background: #fdba30;color: #fff}
+.layui-table-cell .layui-btn-normal:hover{background: #26b6af;color: #fff}
+.layui-table-cell .layui-btn-info:hover{background: #55aaff;color: #fff}
+.layui-table-cell .layui-btn-danger:hover{background: #ff6951;color: #fff}
+.layui-tab-brief>.layui-tab-title .layui-this {border-bottom: 1px solid #27b7b0;}
+/*查询检索*/
+.jstree-default .jstree-search {  color: #ff3139!important;  font-weight: 700;font-style: normal;  }
+.search-results{  width: 90%;  margin: -3px auto;  color: #4b5377;  font-size: 12px; background: #fafdff }
+.search-results em{color:#ff6664 ;margin-right: 2px;font-weight: bolder;font-style: normal;}
+
+.dropup{height: 26px;  line-height: 26px; margin-bottom: 0;  border: 0; background: 0;}
+.dropup button {margin: 0 5px;padding: 0 3px!important;width: 50px;text-align: left;}
+.fixed-table-container {border: 1px solid #e5e5e5;}
+.bootstrap-table .table {border-bottom: 1px solid #e5e5e5;}
+.bootstrap-table .table>thead>tr>th {border-bottom: 1px solid #e5e5e5;}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {border-top: 1px solid #e5e5e5;}
+
+.pagination>li>a, .pagination>li>span{border: 0!important;padding: 0 12px!important;}
+.pagination>li.page-pre>a,.pagination>li.page-next>a{font-size: 28px;color: #400!important; line-height: 26px;}
+.pagination>li.page-number >a{line-height: 26px}
+.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover{color: #400!important;}
+.fixed-table-pagination .pagination-info {line-height: 26px;margin-right: 5px;}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover{background-color: #27b7b0;border: 0;}
+.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover{background: #fff;border: 0!important;}
+.pagination>li.page-number>a:hover{color: #27b7b0;}
+.pagination>li.page-number.active>a:hover{color: #fff;}
+.fixed-table-pagination{text-align: center;}
+.fixed-table-pagination .pagination-detail, .fixed-table-pagination div.pagination {display:inline-block!important;float: none!important;}
+.fixed-table-pagination div.pagination .pagination { margin: -6px 0;  }
+.form-control:focus{box-shadow: 0 0 0 0!important;border: 1px solid #27b7b0}
+.editable-click, a.editable-click, a.editable-click:hover {text-decoration: none;  border-bottom: 0;  color: #27b7b0;  }
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {background-color: #27b7b0;  }
+.btn .caret {margin-right: 4px;float: right;margin-top: 8px;}
+.dropdown-menu{min-width: 90px;}
+.page-content  .layui-tab-title .layui-this:after{top: -3px;}
+
+
+/*-------------------新增面板样式--------------------------*/
+.item-panel{background: #fff;padding: 8px 20px;margin-bottom: 10px;border: 1px solid  #E2EAEA}
+.item-panel .panel-header{padding:12px 0;border-bottom: 1px solid #dfe1e7;}
+.item-panel .panel-header label{padding-left: 8px;font-weight: bold}
+.item-panel .panel-body{padding-top:10px}
+.txt-panel .panel-body{height: 220px; overflow-y: auto;}
+.txt-panel .panel-body li{line-height: 30px;overflow: hidden; word-wrap: break-word; word-break: break-all; }
+.hussat-info{font-size: 14px;line-height: 26px;color: #666;text-align: justify;}
+.hussat-info em{margin: 0 2px;font-weight: bold}
+.mode-title{position:relative;color: #666;font-weight: bold;font-size: 14px;text-align: center;line-height: 50px;letter-spacing: 1px}
+.mode-title span{position:relative;display:inline-block;width:120px;z-index: 1;background: #fff}
+.mode-title::after{content: '';position: absolute;width: 100%;border-bottom: 1px dashed #E2EAEA;bottom: 24px;left: 0}
+.mode-item-msg{background:rgba(241,253,252,1);border:1px solid rgba(226,234,234,1);padding: 15px 55px;margin-bottom: 12px}
+.nine-item-1{background: url(../img/iconhart.png) no-repeat}
+.nine-item-2{background: url(../img/iconhuancun.png) no-repeat}
+.nine-item-3{background: url(../img/iconclock.png) no-repeat}
+.nine-item-4{background: url(../img/iconcheck.png) no-repeat}
+.nine-item-5{background: url(../img/icon-renw.png) no-repeat}
+.nine-item-6{background: url(../img/iconlog.png) no-repeat}
+.nine-item-7{background: url(../img/iconchijiuc.png) no-repeat}
+.nine-item-8{background: url(../img/iconfront.png) no-repeat}
+.nine-item-9{background: url(../img/iconshuj.png) no-repeat}
+.nine-item{float: left;width: calc( 50% - 40px);line-height: 50px;padding-left: 40px;background-position: left center;color: #666}
+.eight-item{text-align: center;color: #fff;margin-bottom: 9px;padding: 65px 0 5px;line-height: 30px;}
+.mode-item .layui-col-sm3:nth-child(1) .eight-item{background: #5BC8C3 url(../img/eight-1.png) no-repeat center top 12px }
+.mode-item .layui-col-sm3:nth-child(2) .eight-item{background: #71B1F2 url(../img/eight-2.png) no-repeat center top 12px }
+.mode-item .layui-col-sm3:nth-child(3) .eight-item{background: #62CCFD url(../img/eight-3.png) no-repeat center top 12px }
+.mode-item .layui-col-sm3:nth-child(4) .eight-item{background: #A296E8 url(../img/eight-4.png) no-repeat center top 12px }
+.mode-item .layui-col-sm3:nth-child(5) .eight-item{background: #CC96E8 url(../img/eight-5.png) no-repeat center top 12px }
+.mode-item .layui-col-sm3:nth-child(6) .eight-item{background: #F5B379 url(../img/eight-6.png) no-repeat center top 12px }
+.mode-item .layui-col-sm3:nth-child(7) .eight-item{background: #F59C79 url(../img/eight-7.png) no-repeat center top 12px }
+.mode-item .layui-col-sm3:nth-child(8) .eight-item{background: #F78285 url(../img/eight-8.png) no-repeat center top 12px }
+.version{min-height: 118px}
+.version-item{margin-bottom: 10px}
+.version-item .version-title{background: #EE944B;color: #fff; text-align: center;line-height: 32px;float: left;width: 80px;}
+.version-item .version-info{background: #FFF8F3;border:1px solid #EE944B;color: #666;text-align: center ;line-height: 30px;float: left;width: calc(100% - 82px)}
+.link-item:nth-child(1){background: url(../img/group-icon.png) no-repeat}
+.link-item:nth-child(2){background: url(../img/qq-icon.png) no-repeat}
+.link-item:nth-child(3){background: url(../img/phone-icon.png) no-repeat}
+.link-item:nth-child(4){background: url(../img/mile-icon.png) no-repeat}
+.link-item{width: calc( 100% - 35px);line-height: 32px;padding-left: 35px;background-position: left center!important;color: #666}
+.link-item span{color: #999}
+.layui-timeline-item{ cursor: pointer}
+.layui-timeline-item:before{ left: 105px;top: 25px}
+.updata-box{min-height:870px}
+.updata-title{position: absolute;padding: 4px 10px;color: #27B4AD;text-align: right;border-radius: 4px;line-height: 25px;font-weight: bold}
+.updata-title .updata-time{font-weight: normal}
+.layui-timeline-axis {position: absolute;left: 96px;top: 20px;font-weight: bold;color: #27B4AD}
+.updata-body{width: calc(100% - 130px);float: right;padding-left: 10px;position: relative;}
+.updata-body .updata-info{border: 1px solid #E2EAEA;padding: 20px;border-radius: 4px}
+.updata-body .updata-info-con{color: #666;line-height: 30px;display: none}
+.updata-info-con span{position: absolute;padding: 0 10px}
+.updata-info-con span.author{float:right;position:relative;line-height: 30px}
+.updata-info-con ul{padding-left: 10px;}
+.updata-body .arrow {position: absolute;left: 0;top: 18px;width:0;height:0;border-top:10px solid transparent;border-bottom:10px solid transparent;border-right:10px solid #E2EAEA;}
+.updata-body .arrow::before{content: '';position: absolute;width:0;height:0;left: 2px;top: -10px;border-top:10px solid transparent;border-bottom:10px solid transparent;border-right:10px solid #fff;}
+.updata-body .updata-info i{color: #999;}
+.layui-timeline-title i{font-size: 26px;cursor: pointer}
+li.active .updata-title{border :1px solid #27B4AD;color: #666 }
+li.active .updata-body .updata-info{border-color:#27B4AD }
+li.active .updata-body .arrow {border-right:10px solid #27B4AD;}
+@media screen and (max-width: 1600px){
+    .mode-item-msg{padding: 15px;}
+    .nine-item{height: 26px;margin-bottom: 20px;line-height: 26px;padding-top: 4px}
+    .nine-item:last-child{margin-bottom:0;}
+}
+
