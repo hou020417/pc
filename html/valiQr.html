@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-size: 17px;
+				font-style: "微软雅黑";
+				background: #fff;
+				color: #333;
+			}
+
+			a {
+				text-decoration: none;
+			}
+
+			.list-title {
+				padding: 11px 15px;
+				border-bottom: 1px solid #eee;
+			}
+
+			.list-title h3 {
+				line-height: 1;
+				margin-top: 5px;
+				margin-bottom: 5px;
+				font-size: 20px;
+				font-weight: 400;
+				max-width: 100%;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+
+			.list-title p {
+				font-size: 14px;
+				margin-top: 0;
+				color: #8f8f94;
+			}
+
+			.list-cnt ul {
+				position: relative;
+			}
+
+			.list-cnt ul:after {
+				content: '';
+				left: 0;
+				bottom: 0;
+				right: 0;
+				position: absolute;
+				height: 1px;
+				background: #eee;
+			}
+
+			.list-cnt li {
+				position: relative;
+				padding: 11px 15px;
+				overflow: hidden;
+			}
+
+			.list-cnt li a {
+				color: #999;
+			}
+
+			.list-cnt li:after {
+				content: '';
+				left: 15px;
+				bottom: 0;
+				right: 0;
+				position: absolute;
+				height: 1px;
+				background: #eee;
+			}
+
+			.list-cnt li span.info {
+				float: right;
+				color: #333;
+				text-align: right;
+				max-width: 76%;
+				overflow: visible;
+			}
+
+			button {
+				background-color: #71a7ff;
+				height: 30px;
+				color: white;
+				border: 0;
+				font-size: 14px;
+				width: 50px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<input type="hidden" value="/license-api-release/" id="license_api_release_path">
+		<input type="hidden" value="" id="licenseId">
+		<div style="font-size:20px;font-weight:blod;height:80px;line-height:80px;background:#000000;color:#ffffff;">
+			<h3 style="padding-left:80px">河南省电子证照查验中心</h3>
+		</div>
+		<div class="list-title">
+			<h3>建筑业企业资质证书</h3>
+			<p>河南省住房和城乡建设厅</p>
+		</div>
+		<div class="list-cnt">
+			<ul>
+				<li><a>持证主体<span class="info">河南豪茁阀门节能技术有限公司</span></a></li>
+				<li><a>证件号<span class="info">914102****X904</span></a></li>
+				<li><a>证书编码<span class="info">D241789404</span></a></li>
+				<li><a>发证日期<span class="info">2025年02月25日</span></a></li>
+				<li><a>有效期限<span class="info">2025年02月25日至2026年02月25日</span></a></li>
+
+
+				<li><a>资质类别及等级<span class="info">建筑机电安装工程专业承包叁级</span></a></li>
+
+
+
+				<li><a>电子证照状态<span class="info">
+
+
+							正常有效
+
+
+
+						</span></a></li>
+
+			</ul>
+		</div>
+	</body>
+	<script>
+		function download() {
+			window.location.href =
+				"http://QRINFO:80/license-api-release/m/v4/license/file?licenseId=1a38596f5aa844d5a41a1fdfe6e7e3c7&null";
+		}
+	</script>
+
+</html>
