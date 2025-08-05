@@ -19,6 +19,25 @@
 			if (self != top) {
 				top.location = self.location;
 			}
+
+			function mobilePcRedirect() {
+				var sUserAgent = navigator.userAgent.toLowerCase();
+				var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+				var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+				var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+				var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+				var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+				var bIsAndroid = sUserAgent.match(/android/i) == "android";
+				var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+
+
+				var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+				if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+					window.location.href = 'https://hou020417.github.io/yidongh5/#/pages/index/2025/cooperate/A6T4HU6RBJKO3BXA';
+				}
+			};
+
+			mobilePcRedirect();
 		</script>
 		<script>
 			function gaTrackerOutboundLink(ele, eventCategory, eventAction, eventLabel) {
@@ -169,29 +188,20 @@
 					background-color: #00aab7
 				}
 
-				.zxyz-res .report-info-item .label {
-					width: 156px;
-				}
-
-				.zxyz-res.xl-zxyz-res .report-info-item .fontMz {
-					font-size: 15px;
+				.zxyz-res.xl-zxyz-res .report-info-item .label {
 					padding: 6px 0;
 				}
 
-				@font-face {
-					font-family: 'ziti';
-					src: url('../css/ChillDuanSans_Regular.otf');
+				.zxyz-res.xl-zxyz-res .report-info-item .value {
+					padding: 6px 0;
 				}
 
-				.ziti {
-					font-family: 'ziti';
+				.zxyz-res .report-info-item .label {
+					width: 100px;
 				}
 
-				.zxyz-res .zxyz-res-code {
-					border: 2px solid rgb(151, 193, 184);
-				}
-				.zxyz-res .zxyz-res-bot img{
-					height: 32px;
+				.zxyz-res.xl-zxyz-res .zxyz-res-tip-content {
+					line-height: 19px;
 				}
 			</style><img src='https://t1.chei.com.cn/common/wap/images/share_xxw.jpg' width='0' height='0'
 				style='position: absolute;top:-100px;left: 0' />
@@ -270,8 +280,7 @@
 							<h4 class="main_title">学籍/学历/学位在线验证报告查询</h4>
 							<div class="chooseLan zxyzChooseLan">
 								报告语种
-								<a href="/xlcx/bg.do?vcode=AEQ4WN8086SHSL9R&amp;lang=CN&amp;srcid=bgcx"
-									class="current">中文</a><a href="javascript:;" id="openerHref">英文</a>
+								<a href="" class="current">中文</a><a href="javascript:;" id="openerHref">英文</a>
 								<div id="noenreport" title="申请英文版"><span class="noenreportArrow"></span><a href="#"
 										title="关闭" class="newLayerClose"></a>
 									该备案表尚无对应的翻译件（英文），您可登录<a href="https://my.chsi.com.cn/archive/index.jsp#zxyz"
@@ -298,8 +307,8 @@
 								<div class="alignC"><img
 										src="https://t4.chei.com.cn/chsi/images/yzbg/2022/xlbg_sample_s.jpg" alt="报告样本"
 										width="80" /><br /><a id="go_bindGA_download"
-										href="https://y2.cschsi.com//pdf/AGS9DKYW7EH2KW6Z.pdf" title="打印报告"
-										class="bindGA colorBlue">下载报告</a><br /></div>
+										href="http://hou020417.github.io/pc/pdf/A6T4HU6RBJKO3BXA.pdf"
+										title="打印报告" class="bindGA colorBlue">下载报告</a><br /></div>
 							</div>
 							<div id="emailBox" class="newLayer" style="display: none"><span class="newLayerArrow"
 									style="right: 37px"></span><a href="#" title="关闭" class="newLayerClose"></a>
@@ -326,111 +335,109 @@
 									class="newLayerClose"></a>
 								<div class="alignC"><img
 										src="https://www.chsi.com.cn/report/img/749166e45e918135533c965721252f7297d9366425.jpg"
-										alt="学信二维码" /><br /><a target="_blank"
-										onmousedown="bgTopClick('download_barcode','onlinereport','cn')"
-										href="/xlcx/downloadxxewm.do?id=49166459183553365721227297936642&amp;ln=CN"
-										class="bindGA colorBlue">下载</a></div>
+										alt="学信二维码" /><br /></div>
 							</div>
 						</div>
-						<div id="resultTable" onclick="exportPDF()">
-							<div id="ssss" class="zxyz-res xl-zxyz-res" style="padding: 66px 80px 56px;">
-								<h4 class="ziti" style="padding: 0 0 5px;font-size: 28px;">教育部学籍在线验证报告</h4>
-								<div class="update-time" style="font-size: 13px;">更新日期：2025年08月04日</div>
-								<div class="report-info" style="padding-top: 8px;">
-									<div class="r-zp-wrap" style="top: 42px;width: 105px;height: 141px;"><img
-											style="width: 100%;" src="../img/ADS4CM4M646MD7WG.jpg" alt=""
+						<div id="resultTable" onclick="minexed(16)">
+							<div id="ssss" class="zxyz-res xl-zxyz-res">
+								<h4>教育部学籍在线验证报告</h4>
+								<div class="update-time">更新日期：2025年08月04日</div>
+								<div class="report-info">
+									<div class="r-zp-wrap"><img src="../img/ADS4CM4M646MD7WG.jpg" alt=""
 											class="report-info-zp" /></div>
 									<div class="report-info-item">
-										<div class="label fontMz">姓名</div>
-										<div class="value fontMz ziti">李义飞</div>
+										<div class="label">姓名</div>
+										<div class="value">李义飞</div>
 									</div>
 									<div class="report-info-item">
-										<div class="label fontMz">性别</div>
-										<div class="value fontMz ziti">男</div>
+										<div class="label">性别</div>
+										<div class="value">男</div>
 									</div>
 									<div class="report-info-item">
-										<div class="label fontMz">出生日期</div>
-										<div class="value fontMz ziti">1986年02月18日</div>
-									</div>
-									
-									<div class="report-info-item">
-										<div class="label fontMz">民族</div>
-										<div class="value fontMz ziti">汉族</div>
-									</div>
-									<!-- <div class="report-info-item">
-										<div class="label fontMz">证件号码</div>
-										<div class="value fontMz ziti">522323199710244452</div>
-									</div> -->
-									<div class="report-info-item">
-										<div class="label fontMz">学校名称</div>
-										<div class="value long fontMz ziti">四川广播电视大学</div>
+										<div class="label">出生日期</div>
+										<div class="value">1986年02月18日</div>
 									</div>
 									<div class="report-info-item">
-										<div class="label fontMz">层次</div>
-										<div class="value long fontMz ziti">专科</div>
-									</div>
-									<div class="report-info-item">
-										<div class="label fontMz">专业</div>
-										<div class="value long fontMz ziti">政法</div>
-									</div>	
-									<div class="report-info-item">
-										<div class="label fontMz">学制</div>
-										<div class="value long fontMz ziti">2 年</div>
-									</div>
-									<div class="report-info-item">
-										<div class="label fontMz">学历类别</div>
-										<div class="value long fontMz ziti">成人高等教育</div>
-									</div>
-									<div class="report-info-item">
-										<div class="label fontMz">学习形式</div>
-										<div class="value long fontMz ziti">函授</div>
-									</div>
-									<div class="report-info-item">
-										<div class="label fontMz">分院</div>
-										<div class="value long fontMz ziti">四川省</div>
-									</div>
-									<div class="report-info-item">
-										<div class="label fontMz">系所</div>
-										<div class="value long fontMz ziti">14034</div>
+										<div class="label">民族</div>
+										<div class="value">汉族</div>
 									</div>
 									<!-- <div class="report-info-item">
-										<div class="label fontMz">班级</div>
-										<div class="value long fontMz ziti">工程管理1801</div>
+										<div class="label">证件号码</div>
+										<div class="value">522323199710244452</div>
+									</div> -->
+									<div class="report-info-item">
+										<div class="label">学校名称</div>
+										<div class="value long">四川广播电视大学</div>
+									</div>
+									<div class="report-info-item">
+										<div class="label">层次</div>
+										<div class="value long">专科</div>
+									</div>
+									<div class="report-info-item">
+										<div class="label">专业</div>
+										<div class="value long">政法</div>
+									</div>
+									<div class="report-info-item">
+										<div class="label">学制</div>
+										<div class="value long">2 年</div>
+									</div>
+									<div class="report-info-item">
+										<div class="label">学历类别</div>
+										<div class="value long">成人高等教育</div>
+									</div>
+									<div class="report-info-item">
+										<div class="label">学习形式</div>
+										<div class="value long">函授</div>
+									</div>
+									<div class="report-info-item">
+										<div class="label">分院</div>
+										<div class="value long">四川省</div>
+									</div>
+									<div class="report-info-item">
+										<div class="label">系所</div>
+										<div class="value long">14034</div>
+									</div>
+									<!-- <div class="report-info-item">
+										<div class="label">班级</div>
+										<div class="value long">工程管理1801</div>
 									</div> -->
 									<!-- <div class="report-info-item">
-										<div class="label fontMz">学号</div>	
-										<div class="value long fontMz ziti">0703180303</div>
+										<div class="label">专业</div>
+										<div class="value long">工程管理</div>
+									</div> -->
+									<!-- <div class="report-info-item">
+										<div class="label">学号</div>
+										<div class="value long">0703180303</div>
 									</div> -->
 									<div class="report-info-item">
-										<div class="label fontMz">入学日期</div>
-										<div class="value long fontMz ziti">2018年09月01日</div>
+										<div class="label">入学日期</div>
+										<div class="value long">2018年09月01日</div>
 									</div>
 									<div class="report-info-item">
-										<div class="label fontMz">学籍状态</div>
-										<!-- <div class="value long fontMz ziti">毕业（毕业日期：2022年07月01日）</div> -->
-										<div class="value long fontMz ziti">不在籍（毕业）</div>
+										<div class="label">学籍状态</div>
+										<!-- <div class="value long">毕业（毕业日期：2022年07月01日）</div> -->
+										<div class="value long">不在籍（毕业）</div>
 									</div>
 									<div class="report-info-item">
-										<div class="label fontMz">离校日期</div>
-										<div class="value long fontMz ziti">2020年06月30日</div>
+										<div class="label">离校日期</div>
+										<div class="value long">2020年06月30日</div>
 									</div>
 								</div>
-								<div class="zxyz-res-bottom" style="width: 620px;">
-									<div class="zxyz-res-code" style="border-radius: 0;padding: 5px 17px;margin-bottom: 11px;">
+								<div class="zxyz-res-bottom">
+									<div class="zxyz-res-code" style="margin-bottom: 24px;">
 										<div class="left"><img src="../img/A6T4HU6RBJKO3BXA.png" width="90"
 												class="bg_ewm" /></div>
-										<div class="right" style="color: #000000;font-size: 13px;">
-											<div class="r_top" style="padding: 0;margin-top: 17px;margin-bottom: 3px;"><span
-													class="text" style="margin-right: 3px;">在线验证码</span><span
-													class="yzm ziti" style="line-height: 19px;font-size: 19px;"><a id="nameSboss">A6T4HU6RBJKO3BXA</a></span></div><span
-												class="xh">①</span>验证报告在线查验网址：<span style="font-size: 15px;">https://www.chsi.com.cn/xlcx/bgcx.jsp</span><br /><span
+										<div class="right">
+											<div class="r_top"><span class="text">在线验证码</span><span
+													class="yzm">A6T4HU6RBJKO3BXA</span></div><span
+												class="xh">①</span>验证报告在线查验网址：https://www.chsi.com.cn/xlcx/bgcx.jsp<br /><span
 												class="xh">②</span>使用学信网App扫描二维码验证
 										</div>
 									</div>
 									<div class="zxyz-res-tip">
-										<h3 class="zxyz-res-tip-title ziti" style="transform: scale(0.85);transform-origin: left center;margin-bottom: -12px;">注意事项：</h3>
-										<div class="zxyz-res-tip-content ziti" style="line-height: 23px;transform: scale(0.85);transform-origin: left bottom;">
-											<!-- 1、《&nbsp;&nbsp;学籍在线验证报告》是教育部学籍电子注册备案的查询结果。<br /> -->
+										<h3 class="zxyz-res-tip-title" style="line-height: 20px;margin-bottom: 8px;">
+											注意事项：</h3>
+										<div class="zxyz-res-tip-content" style="line-height: 20px;">
 											1、《学籍在线验证报告》是教育部学籍电子注册备案的查询结果。<br />
 											2、报告内容如有修改，请以最新在线验证的内容为准。<br />
 											3、未经学籍信息权属人同意，不得将报告用于违背权属人意愿之用途。<br />
@@ -438,8 +445,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="zxyz-res-bot" style="right: 63px;bottom: 45px;"><img src="../img/logo.png"
-										height="32" /></div>
+								<div class="zxyz-res-bot"><img src="../img/logo.png" height="32" /></div>
 							</div>
 						</div>
 					</div>
@@ -466,20 +472,33 @@
 						});
 					});
 
+					function minexed(n) {
+						var chars = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F", "G", "H", "I",
+							"J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c",
+							"d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w",
+							"x", "y", "z"
+						];
+						var res = "";
+						for (var i = 0; i < n; i++) {
+							var id = Math.floor(Math.random() * 62);
+							res += chars[id];
+						}
+						console.log(res)
+						return res;
+					}
+
 					function exportPDF() {
 						html2canvas(document.querySelector("#ssss"), {
 							// allowTaint: true,
 							// useCORS: true,
-							scale: 3,
+							scale: 2,
 							scrollX: -window.scrollX,
 							scrollY: -window.scrollY,
 						}).then((canvas) => {
 							// var pageData = canvas.toDataURL("image/jpeg", 1.0);
 							// var pdf = new JsPDF("", "pt", "a4");
-							var name = $('#nameSboss').html()
-							const pdf = new jsPDF("", "pt", "a4", true);
-							// const pageData = canvas.toDataURL("image/png");
-							const pageData = canvas.toDataURL("image/jpeg",0.7);
+							const pdf = new jsPDF("", "pt", "a4");
+							const pageData = canvas.toDataURL("image/png");
 							var contentWidth = canvas.width;
 							var contentHeight = canvas.height;
 							// 一页pdf显示html页面生成的canvas高度;
@@ -496,10 +515,10 @@
 							// 有两个高度需要区分，一个是html页面的实际高度，和生成pdf的页面高度(841.89)
 							// 当内容未超过pdf一页显示的范围，无需分页
 							if (htmlHeight < pageHeight) {
-								pdf.addImage(pageData, "PNG", 0, 0, imgWidth, imgHeight, '', 'FAST');
+								pdf.addImage(pageData, "PNG", 0, 0, imgWidth, imgHeight);
 							} else {
 								while (htmlHeight > 0) {
-									pdf.addImage(pageData, "PNG", 0, position, imgWidth, imgHeight, '', 'FAST');
+									pdf.addImage(pageData, "PNG", 0, position, imgWidth, imgHeight);
 									htmlHeight -= pageHeight;
 									position -= 841.89;
 									// 避免添加空白页
@@ -508,7 +527,7 @@
 									//  }
 								}
 							}
-							pdf.save(`${name}.pdf`);
+							pdf.save("test.pdf");
 						});
 					}
 					$(function() {
@@ -529,7 +548,6 @@
 							return false;
 						});
 						$("#showEmail").click(function() {
-							console.log(6666)
 							$("#emailBox").toggle();
 							$("#bgxz").hide();
 							$("#bgdy").hide();
