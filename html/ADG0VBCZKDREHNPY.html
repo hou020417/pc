@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>企业码</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="shortcut icon" href="https://cnse.samr.gov.cn/info-pub/static/favicon.ico" type="image/x-icon" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        /* 状态栏 */
+        .status-bar {
+            height: 20px;
+            background: #000;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+            font-size: 12px;
+        }
+        
+        /* 导航栏 */
+        .nav-bar {
+            background: #519DFF;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            position: relative;
+        }
+        
+        .back-btn {
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        
+        .nav-title {
+            color: white;
+            font-size: 17px;
+            font-weight: 500;
+            flex: 1;
+            text-align: center;
+        }
+        
+        .nav-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .nav-icon {
+            width: 20px;
+            height: 20px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+        }
+        
+        /* 标签页 */
+        .tab-bar {
+            background: white;
+            display: flex;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .tab-item {
+            flex: 1;
+            text-align: center;
+            padding: 12px 0;
+            font-size: 15px;
+            color: #666;
+            position: relative;
+        }
+        
+        .tab-item.active {
+            color: #007AFF;
+        }
+        
+        .tab-item.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 217px;
+            height: 2px;
+            background: #007AFF;
+        }
+        
+        /* 内容区域 */
+        .content {
+            background: white;
+            margin: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .info-item {
+            display: flex;
+            padding: 12px 15px;
+            border-bottom: 1px solid #f0f0f0;
+            align-items: flex-start;
+        }
+        
+        .info-item:last-child {
+            border-bottom: none;
+        }
+        
+        .info-label {
+            width: 80px;
+            color: #666;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+        
+        .info-value {
+            flex: 1;
+            color: #333;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        /* 经营范围 */
+        .business-scope {
+            padding: 15px;
+            border-top: 1px solid #f0f0f0;
+			display: flex;
+        }
+        
+        .scope-title {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        
+        .scope-content {
+            color: #333;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        /* 底部导航 */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background: white;
+            border-top: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .nav-btn {
+            width: 30px;
+            height: 30px;
+            background: #f0f0f0;
+            border-radius: 50%;
+        }
+        
+        /* 响应式 */
+        @media (max-width: 375px) {
+            .info-label {
+                width: 70px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 状态栏 -->
+    <!-- <div class="status-bar">
+        <span>16:57</span>
+        <div style="display: flex; gap: 5px;">
+            <span>4G</span>
+            <span>📶</span>
+            <span>🔋</span>
+        </div>
+    </div> -->
+    
+    <!-- 导航栏 -->
+    <div class="nav-bar">
+        <a href="#" class="back-btn">←</a>
+        <div class="nav-title">企业码</div>
+       <div class="nav-actions">
+            <!-- <div class="nav-icon"></div>
+            <div class="nav-icon"></div> -->
+        </div>
+    </div>
+    
+    <!-- 标签页 -->
+    <div class="tab-bar">
+        <div class="tab-item active">执照信息</div>
+        <div class="tab-item">其他信息</div>
+    </div>
+    
+    <!-- 内容区域 -->
+    <div class="content">
+        <div class="info-item">
+            <div class="info-label">名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称</div>
+            <div class="info-value">盛世优脑(天津)智能科技发展有限公司</div>
+        </div>
+        
+        <div class="info-item">
+            <div class="info-label">统&nbsp;一&nbsp;代&nbsp;码</div>
+            <div class="info-value">91120105MA069JH526</div>
+        </div>
+        
+        <div class="info-item">
+            <div class="info-label">法定代表人</div>
+            <div class="info-value">訾立刚</div>
+        </div>
+        
+        <div class="info-item">
+            <div class="info-label">类&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;型</div>
+            <div class="info-value">有限责任公司</div>
+        </div>
+        
+        <div class="info-item">
+            <div class="info-label">注&nbsp;册&nbsp;资&nbsp;本</div>
+            <div class="info-value">伍佰万元人民币</div>
+        </div>
+        
+        <div class="info-item">
+            <div class="info-label">成&nbsp;立&nbsp;日&nbsp;期</div>
+            <div class="info-value">2018年01月11日</div>
+        </div>
+        
+        <div class="info-item">
+            <div class="info-label">经营期限自</div>
+            <div class="info-value">2018年01月11日</div>
+        </div>
+        
+        <div class="info-item">
+            <div class="info-label">经营期限至</div>
+            <div class="info-value">2068年01月10日</div>
+        </div>
+        
+        <div class="info-item">
+            <div class="info-label">登&nbsp;记&nbsp;机&nbsp;关</div>
+            <div class="info-value">天津市和平区市场监督管理局</div>
+        </div>
+        
+        <div class="info-item">
+            <div class="info-label">住&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;所</div>
+            <div class="info-value">天津市和平区新兴街道西康路与成都道交口西南侧朗文名邸1号楼-A102</div>
+        </div>
+        
+        <!-- 经营范围 -->
+        <div class="business-scope">
+			<div class="info-label"></div>
+            <!-- <div class="scope-title">一般项目:</div> -->
+            <div class="scope-content">
+                人工智能基础软件开发;人工智能应用软件开发;人工智能理论与算法软件开发;智能机器人研发;智能机器人销售;云计算设备销售;云计算设备技术服务;物联网设备销售;物联网应用服务;物联网技术研发;物联网技术服务;计算机软硬件及辅助设备零售;信息系统集成服务;互联网数据服务;人工智能公共数据平台;人工智能硬件销售;技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广;业务培训(不含教育培训、职业技能培训等需取得许可的培训);信息咨询服务(不含许可类信息咨询服务);企业管理咨询;社会经济咨询服务;会议及展览服务;广告设计、代理;广告发布(非广播电台、电视台、报刊出版单位);广告制作;组织文化艺术交流活动;企业形象策划;市场营销策划;品牌管理;知识产权服务(专利代理服务除外);商标代理;版权代理;专利代理;法律咨询(不包括律师事务所业务);财务咨询;税务服务;资产评估;工程造价咨询业务;工程管理服务;安全咨询服务;环保咨询服务;认证服务;标准化服务;检验检测服务;计量服务;认证咨询;安全评价业务;安全培训;安全技术防范系统设计施工服务;安全系统监控服务;安全技术防范产品制造;安全技术防范产品销售;安全技术防范产品批发;安全技术防范产品零售;安全技术防范产品进出口;安全技术防范产品租赁;安全技术防范产品维修;安全技术防范产品安装;安全技术防范产品调试;安全技术防范产品维护;安全技术防范产品升级;安全技术防范产品改造;安全技术防范产品集成;安全技术防范产品开发;安全技术防范产品设计;安全技术防范产品制造;安全技术防范产品销售;安全技术防范产品批发;安全技术防范产品零售;安全技术防范产品进出口;安全技术防范产品租赁;安全技术防范产品维修;安全技术防范产品安装;安全技术防范产品调试;安全技术防范产品维护;安全技术防范产品升级;安全技术防范产品改造;安全技术防范产品集成;安全技术防范产品开发;安全技术防范产品设计
+            </div>
+        </div>
+    </div>
+    
+    <!-- 底部导航 -->
+    <!-- <div class="bottom-nav">
+        <div class="nav-btn" style="background: #f0f0f0;">□</div>
+        <div class="nav-btn" style="background: #f0f0f0;">○</div>
+        <div class="nav-btn" style="background: #f0f0f0;">△</div>
+    </div> -->
+</body>
+</html>
