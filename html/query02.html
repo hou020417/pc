@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>许可信息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="shortcut icon" href="https://cnse.samr.gov.cn/info-pub/static/favicon.ico" type="image/x-icon" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        /* 状态栏 */
+        .status-bar {
+            height: 20px;
+            background: #000;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+            font-size: 12px;
+        }
+        
+        /* 导航栏 */
+        .nav-bar {
+            background: #519DFF;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            position: relative;
+        }
+        
+        .back-btn {
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            margin-right: 10px;
+			width: 26px;
+			position: absolute;
+			left: 15px;
+        }
+        
+        .nav-title {
+            color: white;
+            font-size: 17px;
+            font-weight: 500;
+            flex: 1;
+            text-align: center;
+        }
+        
+        .nav-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .nav-icon {
+            width: 20px;
+            height: 20px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+        }
+        
+        /* 标签页 */
+        .tab-bar {
+            background: white;
+            display: flex;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .tab-item {
+            flex: 1;
+            text-align: center;
+            padding: 12px 0;
+            font-size: 15px;
+            color: #666;
+            position: relative;
+        }
+        
+        .tab-item.active {
+            color: #007AFF;
+        }
+        
+        .tab-item.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 217px;
+            height: 2px;
+            background: #007AFF;
+        }
+        
+        /* 内容区域 */
+        .content {
+            background: white;
+            margin: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .info-item {
+            display: flex;
+            padding: 12px 15px;
+            border-bottom: 1px solid #f0f0f0;
+            align-items: flex-start;
+        }
+        
+        .info-item:last-child {
+            border-bottom: none;
+        }
+        
+        .info-label {
+            width: 85px;
+            color: #666;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+        
+        .info-value {
+            flex: 1;
+            color: #333;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        /* 经营范围 */
+        .business-scope {
+            padding: 15px;
+            border-top: 1px solid #f0f0f0;
+			display: flex;
+        }
+        
+        .scope-title {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        
+        .scope-content {
+            color: #333;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        /* 底部导航 */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background: white;
+            border-top: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .nav-btn {
+            width: 30px;
+            height: 30px;
+            background: #f0f0f0;
+            border-radius: 50%;
+        }
+        
+        /* 响应式 */
+        @media (max-width: 375px) {
+            .info-label {
+                width: 70px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 状态栏 -->
+    <!-- <div class="status-bar">
+        <span>16:57</span>
+        <div style="display: flex; gap: 5px;">
+            <span>4G</span>
+            <span>📶</span>
+            <span>🔋</span>
+        </div>
+    </div> -->
+    
+    <!-- 导航栏 -->
+    <div class="nav-bar">
+		<img class="back-btn" src="../img/jiantou.png" alt="">
+        <div class="nav-title">导游证信息查询</div>
+       <div class="nav-actions">
+            <!-- <div class="nav-icon"></div>
+            <div class="nav-icon"></div> -->
+        </div>
+    </div>
+    
+    <!-- 标签页 -->
+    <!-- <div class="tab-bar">
+        <div class="tab-item active">许可信息</div>
+        <div class="tab-item">其他信息</div>
+    </div> -->
+    
+    <!-- 内容区域 -->
+    <div class="content">
+        <div style="text-align:center;padding:15px 0;">
+            <img src="../img/query02.jpg" style="max-width:120px;height:auto;">
+        </div>
+        <div class="info-item">
+            <div class="info-label">名字：</div>
+            <div class="info-value">王小丫</div>
+        </div>
+        <div class="info-item">
+            <div class="info-label">身份证号码：</div>
+            <div class="info-value">320722198108181649</div>
+        </div>
+        <div class="info-item">
+            <div class="info-label">级别：</div>
+            <div class="info-value">初级</div>
+        </div>
+        <div class="info-item">
+            <div class="info-label">导游语种：</div>
+            <div class="info-value">普通话</div>
+        </div>
+        <div class="info-item">
+            <div class="info-label">导游证号：</div>
+            <div class="info-value">KlW2718E</div>
+        </div>
+        <div class="info-item">
+            <div class="info-label">有效期限：</div>
+            <div class="info-value">2025.06.30-2028.06.30</div>
+        </div>
+        
+        <!-- <div class="info-item">
+            <div class="info-label">类&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;型</div>
+            <div class="info-value">个体工商户</div>
+        </div> -->
+        
+        <!-- <div class="info-item">
+            <div class="info-label">注&nbsp;册&nbsp;资&nbsp;本</div>
+            <div class="info-value"></div>
+        </div> -->
+        
+       
+        
+        <!-- <div class="info-item">
+            <div class="info-label">经营期限自</div>
+            <div class="info-value">2023年06月14日</div>
+        </div>
+        
+        <div class="info-item">
+            <div class="info-label">经营期限至</div>
+            <div class="info-value">2073年06月13日</div>
+        </div> -->
+        
+       
+        
+        <!-- <div class="info-item">
+            <div class="info-label">住&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;所</div>
+            <div class="info-value">天津市蓟州区别山镇双杨树村1区4排4号</div>
+        </div> -->
+        
+        <!-- 经营范围 -->
+       <!-- <div class="business-scope">
+			<div class="info-label"></div>
+            <div class="scope-title">一般项目:</div>
+            <div class="scope-content">
+				许可项目:建设工程施工;住宅室内装饰装修。(依法须经批准的项目,经相关部门批准后方可开展经营活动,具体经营项目以相关部门批准文件或许可证件为准)一般项目:土石方工程施工;园林绿化工程施工;金属门窗工程施工;建筑材料销售;模具销售;卫生陶瓷制品销售;五金产品零售;日用陶瓷制品销售;金属制品销售;金属材料销售;塑料制品销售;机械设备租赁;建筑工程机械与设备租赁;劳务服务(不含劳务派遣)。(除依法须经批准的项目外,凭营业执照依法自主开展经营活动)
+            </div>
+        </div> -->
+    </div>
+    
+    <!-- 底部导航 -->
+    <!-- <div class="bottom-nav">
+        <div class="nav-btn" style="background: #f0f0f0;">□</div>
+        <div class="nav-btn" style="background: #f0f0f0;">○</div>
+        <div class="nav-btn" style="background: #f0f0f0;">△</div>
+    </div> -->
+</body>
+</html>
